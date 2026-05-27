@@ -33,7 +33,10 @@ WhatsApp: [+91 90083 93030](https://wa.me/919008393030)
 
 | Path | Purpose |
 |------|---------|
-| `index.html` | Landing page |
+| `index.html` | Homepage — full editorial scroll |
+| `digest.html` | Digest product demo + carousel |
+| `audit.html` | Free audit booking + walk-in preview |
+| `site.js` | Nav, carousel, scroll reveal, stat counters |
 | `tokens.css` / `styles.css` | Design system + layout |
 | `assets/` | Images (hero, bands, social meta, etc.) |
 | `design.md` | Design notes |
