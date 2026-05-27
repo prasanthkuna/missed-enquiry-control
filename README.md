@@ -6,11 +6,15 @@ Landing site for **Missed Enquiry Control** — done-for-you WhatsApp revenue op
 
 ## GitHub Pages
 
-This repo is deployed via **GitHub Pages** from the `main` branch (root).
+This repo deploys via **GitHub Actions** on every push to `main`.
 
-1. Push changes to `main`
-2. In repo **Settings → Pages**, set source to **Deploy from branch** → `main` → `/ (root)`
-3. Allow 1–2 minutes for the site to update
+**One-time setup:**
+
+1. Open [Settings → Pages](https://github.com/prasanthkuna/missed-enquiry-control/settings/pages)
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. After the first workflow run, the site is live at the URL below
+
+Alternatively, use **Deploy from branch** → `main` → `/ (root)` if you prefer branch-based hosting.
 
 ## Local preview
 
