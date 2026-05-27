@@ -460,6 +460,18 @@ a {
   }
 }
 
+.split-band--digest {
+  margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 1024px) {
+  .split-band--digest {
+    align-items: center;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: var(--spacing-xxl);
+  }
+}
+
 /* ——— Cinematic wide bands (Ferrari editorial breathers) ——— */
 .band-cinema-wide {
   position: relative;
@@ -508,16 +520,20 @@ a {
   position: relative;
 }
 
-/* ——— Digest phone + preview ——— */
+/* ——— Digest phone showcase ——— */
 .digest-showcase {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
 }
 
 .digest-phone {
   width: 100%;
-  max-width: 280px;
+  max-width: min(100%, 320px);
+  height: auto;
+  max-height: min(68vh, 520px);
+  object-fit: contain;
+  object-position: center;
   margin-inline: auto;
   display: block;
   border: 1px solid var(--color-hairline);
@@ -525,8 +541,13 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .digest-showcase {
+    justify-content: flex-end;
+  }
+
   .digest-phone {
     max-width: 100%;
+    max-height: min(62vh, 480px);
   }
 }
 
