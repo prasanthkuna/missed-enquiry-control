@@ -536,8 +536,9 @@ a {
   object-position: center;
   margin-inline: auto;
   display: block;
-  border: 1px solid var(--color-hairline);
-  background: var(--color-canvas-elevated);
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
 @media (min-width: 1024px) {
@@ -585,14 +586,24 @@ a {
   width: 100%;
   border-collapse: collapse;
   margin-top: var(--spacing-lg);
+  table-layout: fixed;
+}
+
+.pricing-table .col-service {
+  width: auto;
+}
+
+.pricing-table .col-price {
+  width: 9.5rem;
 }
 
 .pricing-table th,
 .pricing-table td {
   text-align: left;
-  padding: var(--spacing-sm) var(--spacing-xs);
+  padding: var(--spacing-sm) 0;
   border-bottom: 1px solid var(--color-hairline-on-light);
   font: var(--text-body-md);
+  vertical-align: baseline;
 }
 
 .pricing-table th {
@@ -600,12 +611,26 @@ a {
   letter-spacing: var(--tracking-caption-uppercase);
   text-transform: uppercase;
   color: var(--color-muted);
+  padding-bottom: var(--spacing-xs);
 }
 
+.pricing-table th:last-child,
 .pricing-table td:last-child {
   text-align: right;
+}
+
+.pricing-table .pricing-amount {
+  display: inline-block;
+  min-width: 7.5rem;
   font: var(--text-title-sm);
+  font-variant-numeric: tabular-nums;
   color: var(--color-body-on-light);
+  text-align: right;
+}
+
+.pricing-table .pricing-note {
+  color: var(--color-muted);
+  font-weight: 400;
 }
 
 .pricing-highlight {
