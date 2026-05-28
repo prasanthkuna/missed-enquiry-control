@@ -952,25 +952,37 @@ body.has-sticky-cta {
   }
 }
 
-.proof-visual {
-  position: relative;
-  border: 1px solid var(--color-hairline);
-  overflow: hidden;
-  aspect-ratio: 4 / 5;
-  max-height: 480px;
+.section-head-centered {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 40rem;
 }
 
-.proof-visual img {
+.section-head-centered h2,
+.section-head-centered p {
+  margin-inline: auto;
+}
+
+.spec-grid-centered {
+  margin-top: var(--spacing-lg);
+}
+
+.spec-grid-centered .spec-cell {
+  text-align: center;
+}
+
+.feature-card-photo .card-image img,
+.trust-card img,
+.pricing-visual img,
+.editorial-split img {
+  object-position: center;
+}
+
+.trust-card img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-
-.proof-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(24, 24, 24, 0.85) 100%);
+  object-position: center;
 }
 
 /* ——— Before / after editorial (P0) ——— */
@@ -985,7 +997,7 @@ body.has-sticky-cta {
   width: 100%;
   height: clamp(320px, 42vw, 520px);
   object-fit: cover;
-  object-position: center;
+  object-position: center 40%;
 }
 
 .editorial-split-overlay {
@@ -1094,7 +1106,8 @@ body.has-sticky-cta {
 .carousel-slide img {
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-canvas);
 }
 
 .carousel-slide figcaption {
@@ -1196,12 +1209,6 @@ body.has-sticky-cta {
   background: var(--color-canvas);
 }
 
-.trust-card img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-}
-
 .trust-card-body {
   padding: var(--spacing-sm);
 }
@@ -1276,14 +1283,14 @@ body.has-sticky-cta {
 .pricing-visual {
   border: 1px solid var(--color-hairline-on-light);
   overflow: hidden;
-  min-height: 280px;
+  aspect-ratio: 16 / 10;
 }
 
 .pricing-visual img {
   width: 100%;
   height: 100%;
-  min-height: 280px;
   object-fit: cover;
+  object-position: center 35%;
 }
 
 /* ——— Audit CTA with bg (P2) ——— */
@@ -1415,6 +1422,9 @@ body.has-sticky-cta {
 
 .audit-preview img {
   width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: top center;
   display: block;
 }
 
