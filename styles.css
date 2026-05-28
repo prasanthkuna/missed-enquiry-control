@@ -437,6 +437,14 @@ a {
   opacity: 0.85;
 }
 
+.livery-band.position-band h2 {
+  font: var(--text-display-lg);
+  letter-spacing: var(--tracking-display-lg);
+  font-weight: 500;
+  max-width: 16ch;
+  line-height: 1.2;
+}
+
 /* ——— Digest preview ——— */
 .digest-preview {
   background: var(--color-canvas-elevated);
@@ -985,7 +993,7 @@ body.has-sticky-cta {
 
 .trust-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: center;
 }
@@ -1057,7 +1065,44 @@ body.has-sticky-cta {
   aspect-ratio: 16 / 10;
 }
 
-/* ——— Digest carousel (P0) ——— */
+/* ——— Digest steps (homepage — no IG slider) ——— */
+.digest-steps {
+  list-style: none;
+  counter-reset: digest-step;
+  margin: 0;
+  padding: 0;
+}
+
+.digest-steps li {
+  counter-increment: digest-step;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.digest-steps li::before {
+  content: counter(digest-step, decimal-leading-zero);
+  font: var(--text-caption-uppercase);
+  letter-spacing: var(--tracking-caption-uppercase);
+  color: var(--color-primary);
+}
+
+.digest-steps strong {
+  display: block;
+  font: var(--text-title-sm);
+  color: var(--color-ink);
+  margin-bottom: var(--spacing-xxs);
+}
+
+.digest-steps span {
+  display: block;
+  font: var(--text-body-sm);
+  color: var(--color-body);
+}
+
+/* ——— Digest carousel (digest.html subpage) ——— */
 .digest-block {
   display: grid;
   gap: var(--spacing-lg);
@@ -1213,6 +1258,19 @@ body.has-sticky-cta {
   border: 1px solid var(--color-hairline);
   overflow: hidden;
   background: var(--color-canvas);
+}
+
+.trust-card-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.trust-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .trust-card-body {
