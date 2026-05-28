@@ -850,6 +850,14 @@ a {
   font: var(--text-body-md);
 }
 
+.form-field-hint {
+  flex: 1 1 100%;
+  margin: calc(-1 * var(--spacing-xxs)) 0 0;
+  font: var(--text-caption);
+  color: var(--color-muted);
+  text-align: left;
+}
+
 /* ——— Scroll reveal (P3) ——— */
 [data-reveal] {
   opacity: 1;
