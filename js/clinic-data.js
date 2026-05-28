@@ -112,7 +112,7 @@
     html += '<div class="report-metrics">';
     html += metricCell(audit.totalEnquiries, "Total enquiries", "7-day period");
     html += metricCell(audit.hotLeads, "Hot leads", "Price / book intent");
-    html += metricCell(audit.slowReply15, "Slow reply &gt;15 min", "Hot leads only");
+    html += metricCell(audit.slowReply15, "Slow reply >15 min", "Hot leads only");
     html += metricCell(audit.likelyLost, "Likely lost", "No reply / no follow-up");
     html += "</div>";
     html += '<div class="report-metrics report-metrics--secondary">';
