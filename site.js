@@ -86,16 +86,34 @@
             }
           });
         },
-        { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+        { rootMargin: "0px 0px -5% 0px", threshold: 0.08 }
       );
       revealEls.forEach(function (el) {
         revealObs.observe(el);
+      });
+
+      /* Reveal anything already on screen immediately */
+      window.requestAnimationFrame(function () {
+        revealEls.forEach(function (el) {
+          var rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+            el.classList.add("is-visible");
+            revealObs.unobserve(el);
+          }
+        });
       });
     } else {
       revealEls.forEach(function (el) {
         el.classList.add("is-visible");
       });
     }
+
+    /* Safety net — never leave sections invisible */
+    window.setTimeout(function () {
+      document.querySelectorAll("[data-reveal]").forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    }, 2000);
   } else {
     document.querySelectorAll("[data-reveal]").forEach(function (el) {
       el.classList.add("is-visible");
