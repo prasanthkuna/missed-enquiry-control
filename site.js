@@ -136,30 +136,38 @@
     requestAnimationFrame(step);
   }
 
-  document.querySelectorAll("[data-count-to]").forEach(function (el) {
-    var target = parseInt(el.getAttribute("data-count-to"), 10);
-    if (isNaN(target)) return;
+  function initCounters() {
+    document.querySelectorAll("[data-count-to]").forEach(function (el) {
+      var target = parseInt(el.getAttribute("data-count-to"), 10);
+      if (isNaN(target)) return;
 
-    if (reducedMotion || !("IntersectionObserver" in window)) {
-      el.textContent = target;
-      return;
-    }
+      if (reducedMotion || !("IntersectionObserver" in window)) {
+        el.textContent = target;
+        return;
+      }
 
-    var counted = false;
-    var counterObs = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !counted) {
-            counted = true;
-            animateCount(el, target, 1200);
-            counterObs.unobserve(el);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    counterObs.observe(el);
-  });
+      if (el.dataset.countStarted === "1") return;
+      el.dataset.countStarted = "1";
+
+      var counted = false;
+      var counterObs = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !counted) {
+              counted = true;
+              animateCount(el, target, 1200);
+              counterObs.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+      counterObs.observe(el);
+    });
+  }
+
+  initCounters();
+  document.addEventListener("clinic:hydrated", initCounters);
 
   /* ——— Carousels ——— */
   document.querySelectorAll("[data-carousel]").forEach(function (root) {

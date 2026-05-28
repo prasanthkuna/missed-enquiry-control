@@ -38,6 +38,7 @@
           <li><a href="index.html#proof">Proof</a></li>
           <li><a href="index.html#how">Process</a></li>
           <li><a href="digest.html" aria-current="page">Digest</a></li>
+          <li><a href="report.html">Check clinic</a></li>
           <li><a href="index.html#pricing">Pilot</a></li>
         </ul>
       </nav>
@@ -54,6 +55,7 @@
     <a href="index.html#proof">Proof</a>
     <a href="index.html#how">Process</a>
     <a href="digest.html">Digest</a>
+    <a href="report.html">Check clinic</a>
     <a href="index.html#pricing">Pilot</a>
     <a href="audit.html">Free audit</a>
   </div>
@@ -70,9 +72,10 @@
       </div>
       <div class="hero-content container">
         <p class="breadcrumb"><a href="index.html">Home</a> · Digest</p>
-        <p class="hero-eyebrow">The product</p>
+        <p class="hero-eyebrow">The product · <span data-clinic-name>Celestee Skin Laser and Hair Clinic</span></p>
         <h1 id="page-title">What lands on the owner's phone at 8 AM</h1>
         <p class="hero-lead">Not a CRM login. A daily WhatsApp message with names, delays, and who to call before noon.</p>
+        <p class="report-mode-badge" data-clinic-mode hidden></p>
       </div>
     </section>
 
@@ -84,29 +87,10 @@
             <h2>Exactly what we send</h2>
             <p>Show this on your phone during a walk-in. This is the product.</p>
           </div>
-          <div class="digest-preview" aria-label="Full sample digest">
-            <span class="line-muted">📋 Radiance Derma Studio — WhatsApp Daily Digest</span>
-            <span class="line-muted">📅 27 May 2026 · Yesterday's enquiries</span>
-
-            ━━━━━━━━━━━━━━━━━━━━
-            📊 SUMMARY
-            Total enquiries: 9
-            Hot leads: 4 · Price asked: 3
-
-            <span class="line-alert">🚨 SLA BREACHES</span>
-            Not replied within 15 min: 2
-            → Priya: +22 min, +41 min
-
-            Price shared, no 24hr follow-up: 1
-
-            📞 ACTION TODAY (call before 12 PM)
-            1. +91 98xxx — full body laser
-            2. +91 97xxx — Botox consult
-            3. +91 88xxx — Saturday slot
-
-            Worst delay: 41 min · Priya
-            vs last week avg: 38 min → 29 min ↓
+          <div class="digest-preview" aria-label="Full sample digest" data-clinic-digest="full">
+            Loading preview…
           </div>
+          <a href="report.html?demo=1" class="link-arrow" style="margin-top: var(--spacing-sm); display: inline-block;">See full leakage report</a>
         </div>
         <div data-reveal data-reveal-delay="1">
           <div class="section-head">
@@ -168,6 +152,7 @@
     </div>
   </footer>
 
+  <script src="js/clinic-data.js"></script>
   <script src="site.js"></script>
 </body>
 
