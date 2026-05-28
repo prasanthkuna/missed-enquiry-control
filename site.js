@@ -153,6 +153,7 @@
     if (!track || !slides.length) return;
 
     var index = 0;
+    track.scrollLeft = 0;
 
     function goTo(i) {
       index = (i + slides.length) % slides.length;
