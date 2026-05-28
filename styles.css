@@ -1124,16 +1124,9 @@ body.has-sticky-cta {
 }
 
 .feature-card-photo .card-image img,
-.trust-card img,
+.trust-card-image img,
 .pricing-visual img,
 .editorial-split img {
-  object-position: center;
-}
-
-.trust-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
   object-position: center;
 }
 
