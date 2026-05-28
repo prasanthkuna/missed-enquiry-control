@@ -844,6 +844,11 @@ a {
 
 /* ——— Scroll reveal (P3) ——— */
 [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+html.js [data-reveal]:not(.is-visible) {
   opacity: 0;
   transform: translateY(18px);
   transition:
@@ -980,7 +985,7 @@ body.has-sticky-cta {
 
 .trust-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
 }
@@ -1106,7 +1111,8 @@ body.has-sticky-cta {
 .carousel-slide img {
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   background: var(--color-canvas);
 }
 
