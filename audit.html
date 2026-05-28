@@ -38,6 +38,7 @@
           <li><a href="index.html#proof">Proof</a></li>
           <li><a href="index.html#how">Process</a></li>
           <li><a href="digest.html">Digest</a></li>
+          <li><a href="report.html">Check clinic</a></li>
           <li><a href="index.html#pricing">Pilot</a></li>
         </ul>
       </nav>
@@ -54,6 +55,7 @@
     <a href="index.html#proof">Proof</a>
     <a href="index.html#how">Process</a>
     <a href="digest.html">Digest</a>
+    <a href="report.html">Check clinic</a>
     <a href="index.html#pricing">Pilot</a>
     <a href="audit.html">Free audit</a>
   </div>
@@ -84,6 +86,7 @@
             <p class="eyebrow">What you get</p>
             <h2>Shadow audit deliverable</h2>
             <p>A one-page leakage report you can act on — or hand to staff.</p>
+            <p>Or upload a chat export for an instant preview on our <a href="report.html" style="color: var(--color-primary);">leakage report page</a>.</p>
           </div>
           <ul class="audit-checklist">
             <li>
@@ -135,7 +138,7 @@
             <p class="form-field-hint">The number patients use for price &amp; appointment enquiries</p>
             <label for="clinic" class="visually-hidden">Clinic name</label>
             <input type="text" id="clinic" name="clinic" class="text-input-on-light" placeholder="Clinic name · area"
-              required style="width: 100%;" />
+              data-clinic-prefill required style="width: 100%;" />
             <button type="submit" class="button-primary" style="width: 100%;">Request audit on WhatsApp</button>
           </form>
           <p style="margin-top: var(--spacing-sm); font: var(--text-body-sm); color: var(--color-muted);">
@@ -229,6 +232,7 @@
       color: var(--color-muted);
     }
   </style>
+  <script src="js/clinic-data.js"></script>
   <script src="site.js"></script>
 </body>
 

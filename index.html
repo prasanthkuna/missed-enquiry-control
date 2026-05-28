@@ -45,6 +45,7 @@
           <li><a href="#proof">Proof</a></li>
           <li><a href="#how">Process</a></li>
           <li><a href="digest.html">Digest</a></li>
+          <li><a href="report.html">Check clinic</a></li>
           <li><a href="#pricing">Pilot</a></li>
         </ul>
       </nav>
@@ -61,6 +62,7 @@
     <a href="#proof">Proof</a>
     <a href="#how">Process</a>
     <a href="digest.html">Digest</a>
+    <a href="report.html">Check clinic</a>
     <a href="#pricing">Pilot</a>
     <a href="audit.html">Free audit</a>
   </div>
@@ -88,7 +90,8 @@
         </p>
         <div class="hero-ctas">
           <a href="audit.html" class="button-primary">Book free audit</a>
-          <a href="digest.html" class="button-outline-on-dark">See sample digest</a>
+          <a href="report.html?demo=1" class="button-outline-on-dark">Check your clinic</a>
+          <a href="digest.html" class="link-arrow" style="margin-left: var(--spacing-sm);">See sample digest</a>
         </div>
       </div>
     </section>
@@ -102,19 +105,19 @@
         </div>
         <div class="spec-grid spec-grid-centered" data-reveal data-reveal-delay="1">
           <div class="spec-cell">
-            <div class="value accent">32</div>
+            <div class="value accent" data-clinic-proof-before>38</div>
             <div class="label">Min avg hot response · before</div>
           </div>
           <div class="spec-cell">
-            <div class="value accent"><span data-count-to="8">0</span></div>
+            <div class="value accent"><span data-count-to="11">0</span></div>
             <div class="label">Min avg hot response · after 30d</div>
           </div>
           <div class="spec-cell">
-            <div class="value">15</div>
+            <div class="value" data-clinic-proof-sla>15</div>
             <div class="label">Minute SLA · hot leads</div>
           </div>
           <div class="spec-cell">
-            <div class="value accent">8</div>
+            <div class="value accent" data-clinic-proof-hour>8</div>
             <div class="label">AM daily digest to owner</div>
           </div>
         </div>
@@ -215,9 +218,10 @@
     <section class="band-dark" id="digest" aria-labelledby="digest-title">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">The product</p>
+          <p class="eyebrow">The product · <span data-clinic-short>Celestee</span> preview</p>
           <h2 id="digest-title">What lands on the owner's phone at 8 AM</h2>
           <p>This is what we sell. Not pipelines. Not chatbots. A daily leakage report with names.</p>
+          <p class="report-mode-badge" data-clinic-mode hidden></p>
         </div>
         <div class="digest-block">
           <ol class="digest-steps" data-reveal>
@@ -253,24 +257,11 @@
             </li>
           </ol>
           <div class="digest-side" data-reveal data-reveal-delay="1">
-            <div class="digest-preview" aria-label="Sample daily digest message">
-              <span class="line-muted">📋 Radiance Derma — WhatsApp Daily Digest</span>
-              <span class="line-muted">📅 27 May · Yesterday</span>
-
-              ━━━━━━━━━━━━━━━━━━━━
-              Total enquiries: 9 · Hot leads: 4
-
-              <span class="line-alert">🚨 Not replied within 15 min: 2</span>
-              → Priya: +22 min, +41 min
-
-              📞 Call before 12 PM:
-              1. +91 98xxx — full body laser
-              2. +91 97xxx — Botox consult
-              3. +91 88xxx — Saturday slot
-
-              Worst delay: 41 min · Priya
+            <div class="digest-preview" aria-label="Sample daily digest message" data-clinic-digest="compact">
+              Loading preview…
             </div>
             <a href="digest.html" class="link-arrow">Full digest walkthrough</a>
+            <a href="report.html?demo=1" class="link-arrow">Full leakage report</a>
           </div>
         </div>
       </div>
@@ -416,7 +407,7 @@
           <p class="form-field-hint">The number patients use for price &amp; appointment enquiries</p>
           <label for="clinic" class="visually-hidden">Clinic name</label>
           <input type="text" id="clinic" name="clinic" class="text-input-on-dark" placeholder="Clinic name · area"
-            required />
+            data-clinic-prefill required />
           <button type="submit" class="button-primary">Request audit</button>
         </form>
         <p style="margin-top: var(--spacing-sm); font: var(--text-caption); color: var(--color-muted)">
@@ -447,6 +438,7 @@
         <div class="footer-col">
           <h4>Product</h4>
           <ul>
+            <li><a class="footer-link" href="report.html">Check clinic</a></li>
             <li><a class="footer-link" href="digest.html">Daily digest</a></li>
             <li><a class="footer-link" href="#how">Team inbox</a></li>
             <li><a class="footer-link" href="#pricing">Pilot pricing</a></li>
@@ -496,6 +488,7 @@
       border: 0;
     }
   </style>
+  <script src="js/clinic-data.js"></script>
   <script src="site.js"></script>
 </body>
 

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "version": 1,
+    "defaultClinicId": "celestee",
+    "notes": "Single source of truth for demo/report data. Change defaultClinicId or edit a clinic block. URL override: ?clinic=celestee"
+  },
+  "clinics": {
+    "celestee": {
+      "id": "celestee",
+      "name": "Celestee Skin Laser and Hair Clinic",
+      "shortName": "Celestee",
+      "area": "Jubilee Hills",
+      "address": "Film Nagar · Road No 6",
+      "website": "https://www.celesteeclinics.com",
+      "googleReviews": "4100+",
+      "services": ["Laser hair", "PRP", "Anti-aging", "Medi-facial"],
+      "team": "Dr Raj Kirit team",
+      "mode": "demo",
+      "modeLabel": "Illustrative preview — for outreach & walk-ins",
+      "proof": {
+        "responseBeforeMin": 38,
+        "responseAfterMin": 11,
+        "slaMinutes": 15,
+        "digestHour": 8
+      },
+      "digest": {
+        "dateLabel": "27 May 2026 · Yesterday's enquiries",
+        "totalEnquiries": 11,
+        "hotLeads": 5,
+        "priceAsked": 4,
+        "appointmentIntent": 3,
+        "slaBreaches": 3,
+        "breaches": [
+          { "staff": "Front desk", "delays": ["+18 min", "+34 min"] },
+          { "staff": "Front desk", "delays": ["+52 min"] }
+        ],
+        "priceNoFollowUp": 2,
+        "callList": [
+          "+91 98xxx — full body laser (asked 6:15 PM)",
+          "+91 97xxx — PRP hair package (price sent, no follow-up)",
+          "+91 88xxx — Saturday medi-facial slot unconfirmed"
+        ],
+        "worstDelayMin": 52,
+        "worstStaff": "Front desk",
+        "weekAvgBefore": 41,
+        "weekAvgAfter": 28
+      },
+      "audit": {
+        "periodDays": 7,
+        "totalEnquiries": 52,
+        "hotLeads": 19,
+        "slowReply15": 8,
+        "priceNoFollowUp24": 4,
+        "likelyLost": 5,
+        "verdict": "You likely lost 5 booking conversations last week due to slow or missing follow-up — not ad spend.",
+        "medianAllMin": 22,
+        "medianHotMin": 38,
+        "slowestHot": "1 hr 48 min",
+        "noReply": 3,
+        "leaks": [
+          { "day": "Tue 4:20 PM", "intent": "Full body laser price", "wait": "52 min", "by": "Front desk" },
+          { "day": "Wed 11:40 AM", "intent": "PRP hair sessions cost", "wait": "41 min", "by": "Front desk" },
+          { "day": "Thu 1:15 PM", "intent": "Botox forehead quote", "wait": "34 min", "by": "Front desk" },
+          { "day": "Fri 7:05 PM", "intent": "Anti-aging package", "wait": "108 min", "by": "Next day" },
+          { "day": "Sat 10:30 AM", "intent": "Medi-facial appointment", "wait": "22 min", "by": "Front desk" }
+        ]
+      }
+    },
+    "radiance": {
+      "id": "radiance",
+      "name": "Radiance Derma Studio",
+      "shortName": "Radiance",
+      "area": "Jubilee Hills",
+      "address": "Jubilee Hills",
+      "website": "",
+      "googleReviews": "",
+      "services": ["Laser", "Botox", "Hair treatment"],
+      "team": "Reception-led",
+      "mode": "demo",
+      "modeLabel": "Sample clinic — fictional demo",
+      "proof": {
+        "responseBeforeMin": 32,
+        "responseAfterMin": 8,
+        "slaMinutes": 15,
+        "digestHour": 8
+      },
+      "digest": {
+        "dateLabel": "27 May · Yesterday",
+        "totalEnquiries": 9,
+        "hotLeads": 4,
+        "priceAsked": 3,
+        "appointmentIntent": 2,
+        "slaBreaches": 2,
+        "breaches": [{ "staff": "Priya", "delays": ["+22 min", "+41 min"] }],
+        "priceNoFollowUp": 1,
+        "callList": [
+          "+91 98xxx — full body laser",
+          "+91 97xxx — Botox consult",
+          "+91 88xxx — Saturday slot"
+        ],
+        "worstDelayMin": 41,
+        "worstStaff": "Priya",
+        "weekAvgBefore": 38,
+        "weekAvgAfter": 29
+      },
+      "audit": {
+        "periodDays": 7,
+        "totalEnquiries": 38,
+        "hotLeads": 14,
+        "slowReply15": 6,
+        "priceNoFollowUp24": 3,
+        "likelyLost": 4,
+        "verdict": "You likely lost 4 booking conversations last week due to slow or missing follow-up — not ad spend.",
+        "medianAllMin": 28,
+        "medianHotMin": 41,
+        "slowestHot": "2 hr 14 min",
+        "noReply": 2,
+        "leaks": [
+          { "day": "Tue 3:12 PM", "intent": "Full body laser price", "wait": "47 min", "by": "Priya" },
+          { "day": "Wed 11:05 AM", "intent": "Botox forehead cost", "wait": "62 min", "by": "Priya" },
+          { "day": "Thu 2:40 PM", "intent": "Appointment Saturday", "wait": "38 min", "by": "Priya" }
+        ]
+      }
+    }
+  }
+}

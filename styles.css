@@ -1552,3 +1552,198 @@ body.has-sticky-cta {
     gap: var(--spacing-xl);
   }
 }
+
+/* ——— Clinic report page ——— */
+.report-layout {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 1024px) {
+  .report-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+.report-panel {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-hairline-on-light);
+  background: var(--color-canvas-elevated-on-light);
+}
+
+.report-panel label {
+  display: block;
+  font: var(--text-caption-uppercase);
+  letter-spacing: var(--tracking-caption-uppercase);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-top: var(--spacing-sm);
+  margin-bottom: 6px;
+}
+
+.report-upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.report-file-input {
+  padding: var(--spacing-xs);
+}
+
+.report-select {
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.report-hint {
+  margin-top: var(--spacing-sm);
+  font: var(--text-body-sm);
+  color: var(--color-muted);
+}
+
+.report-mode-badge {
+  margin-top: var(--spacing-sm);
+  font: var(--text-caption);
+  color: var(--color-muted);
+  max-width: 48ch;
+}
+
+.report-results {
+  padding: var(--spacing-lg) 0;
+}
+
+.report-head h2 {
+  font: var(--text-display-md);
+  letter-spacing: var(--tracking-display-md);
+  margin-bottom: 4px;
+}
+
+.report-head p {
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.report-source {
+  font: var(--text-caption-uppercase);
+  letter-spacing: var(--tracking-caption-uppercase);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.report-mode {
+  font: var(--text-body-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.report-verdict {
+  font: var(--text-title-md);
+  color: var(--color-body-strong);
+  max-width: 52ch;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.45;
+}
+
+.report-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .report-metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.report-metrics--secondary {
+  opacity: 0.92;
+}
+
+.report-metric {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-hairline);
+  background: var(--color-canvas-elevated);
+}
+
+.report-metric-value {
+  font: var(--text-display-sm);
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.report-metric-label {
+  font: var(--text-body-sm);
+  color: var(--color-body-strong);
+  margin-top: 4px;
+}
+
+.report-metric-hint {
+  font: var(--text-caption);
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.report-subhead {
+  font: var(--text-title-sm);
+  margin: var(--spacing-md) 0 var(--spacing-sm);
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font: var(--text-body-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.report-table th,
+.report-table td {
+  text-align: left;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.report-table th {
+  font: var(--text-caption-uppercase);
+  letter-spacing: var(--tracking-caption-uppercase);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.report-digest-wrap {
+  margin-top: var(--spacing-md);
+}
+
+.report-digest-wrap .digest-preview {
+  max-width: 36rem;
+}
+
+.report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.report-error {
+  color: var(--color-primary);
+  font: var(--text-body-sm);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-primary);
+}
+
+.digest-side .link-arrow + .link-arrow {
+  display: block;
+  margin-top: var(--spacing-xs);
+}
+
+.hero-ctas .link-arrow {
+  align-self: center;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
