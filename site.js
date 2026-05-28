@@ -40,7 +40,7 @@
       var message =
         "Hi — I'd like the free 7-day WhatsApp leakage audit for my derma clinic.\n\n" +
         "Clinic: " + clinic + "\n" +
-        "My WhatsApp: +" + phone;
+        "Clinic WhatsApp: +" + phone;
 
       window.open(
         "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(message),
