@@ -1,108 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Upload a WhatsApp export or load a demo — see where your clinic loses patient enquiries." />
-  <meta property="og:title" content="Clinic Report · Clinic Lead Recovery" />
-  <meta property="og:url" content="https://prasanthkuna.github.io/missed-enquiry-control/report.html" />
-  <meta property="og:image" content="https://prasanthkuna.github.io/missed-enquiry-control/assets/brand/og.svg" />
-  <title>Clinic Report · Clinic Lead Recovery</title>
-  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="tokens.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="components.css" />
-  <script>document.documentElement.classList.add("js");</script>
-</head>
-
-<body class="has-sticky-cta theme-light" data-theme="marketing">
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="assets/brand/logo.svg" width="32" height="32" alt="" /><span>Clinic Lead Recovery</span></a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="digest.html">Daily summary</a></li>
-          <li><a href="report.html" aria-current="page">Sample report</a></li>
-        </ul>
-      </nav>
-      <div class="nav-actions">
-        <a href="audit.html" class="btn-accent">Free audit</a>
-        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobile-menu" hidden>
-    <a href="index.html">Home</a>
-    <a href="audit.html">Free audit</a>
-  </div>
-
-  <div class="sticky-cta" id="sticky-cta"><a href="audit.html" class="btn-primary">Book free audit</a></div>
-
-  <main>
-    <section class="page-hero" aria-labelledby="page-title">
-      <div class="container">
-        <p class="breadcrumb"><a href="index.html">Home</a> · Sample report</p>
-        <p class="eyebrow">Instant preview</p>
-        <h1 id="page-title">See where you lose patient enquiries</h1>
-        <p class="hero-lead">Upload a WhatsApp chat export for a quick read — or load the <span data-clinic-short>Celestee</span> demo for walk-ins.</p>
-        <p class="report-mode-badge" data-clinic-mode hidden></p>
-      </div>
-    </section>
-
-    <section class="section section--paper">
-      <div class="container report-layout">
-        <div class="report-panel" data-reveal>
-          <p class="eyebrow">Option A · Your data</p>
-          <h2>Upload WhatsApp export</h2>
-          <p style="font:var(--text-body-sm);color:#71717a;margin-bottom:1rem">Phone → More → Export chat → Without media. Processed in your browser only.</p>
-          <form id="export-upload-form">
-            <label for="export-clinic-name">Clinic name</label>
-            <input type="text" id="export-clinic-name" class="input input--light" placeholder="Clinic name · area" data-clinic-prefill />
-            <label for="export-file">Chat export (.txt)</label>
-            <input type="file" id="export-file" class="input input--light" accept=".txt,text/plain" required />
-            <button type="submit" class="btn-primary btn-primary--light" style="margin-top:1rem;width:100%">Analyze export</button>
-          </form>
-        </div>
-        <div class="report-panel" data-reveal data-reveal-delay="1">
-          <p class="eyebrow">Option B · Demo</p>
-          <h2>Load clinic preview</h2>
-          <p style="font:var(--text-body-sm);color:#71717a;margin-bottom:1rem">Edit <code>data/clinics.json</code> when you add outreach clinics.</p>
-          <label for="demo-clinic-select">Clinic</label>
-          <select id="demo-clinic-select" class="input input--light"></select>
-          <button type="button" id="load-demo-report" class="btn-outline btn-outline--light" style="margin-top:1rem;width:100%">Show demo report</button>
-          <p class="form-hint">Default: <span data-clinic-name>Celestee Skin Laser and Hair Clinic</span> · <span data-clinic-area>Jubilee Hills</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-live="polite">
-      <div class="container">
-        <div id="report-results" class="report-results" hidden></div>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <div class="container">
-        <h2 data-reveal>Want this every morning?</h2>
-        <p data-reveal data-reveal-delay="1">Book the free 7-day audit — we connect your phone and WhatsApp and send you a daily summary with staff names.</p>
-        <a href="audit.html" class="btn-primary" data-reveal data-reveal-delay="2">Book free audit</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-bottom" style="margin:0;border:none;padding:0">
-      <span>© 2026 Clinic Lead Recovery</span>
-      <a href="index.html" class="link-arrow">Back to home</a>
-    </div>
-  </footer>
-
-  <script src="js/clinic-data.js"></script>
-  <script src="site.js"></script>
-</body>
-
-</html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+
+    content="Upload a WhatsApp export or load a demo — see where your clinic loses patient enquiries." />
+
+  <meta property="og:title" content="Clinic Report · Clinic Lead Recovery" />
+
+  <meta property="og:url" content="https://prasanthkuna.github.io/missed-enquiry-control/report.html" />
+
+  <meta property="og:image" content="https://prasanthkuna.github.io/missed-enquiry-control/assets/brand/og.svg" />
+
+  <title>Clinic Report · Clinic Lead Recovery</title>
+
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="tokens.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="components.css" />
+
+  <script>document.documentElement.classList.add("js");</script>
+
+</head>
+
+
+
+<body class="has-sticky-cta theme-light" data-theme="marketing">
+
+  <header class="site-header" id="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand"><img src="assets/brand/logo.svg" width="32" height="32" alt="" /><span>Clinic Lead Recovery</span></a>
+
+      <nav aria-label="Primary">
+
+        <ul class="nav-links">
+
+          <li><a href="digest.html">Daily summary</a></li>
+
+          <li><a href="report.html" aria-current="page">Sample report</a></li>
+
+        </ul>
+
+      </nav>
+
+      <div class="nav-actions">
+
+        <a href="audit.html" class="btn-accent">Free audit</a>
+
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+
+    <a href="index.html">Home</a>
+
+    <a href="audit.html">Free audit</a>
+
+  </div>
+
+
+
+  <div class="sticky-cta" id="sticky-cta"><a href="audit.html" class="btn-primary">Book free audit</a></div>
+
+
+
+  <main>
+
+    <section class="page-hero" aria-labelledby="page-title">
+
+      <div class="container">
+
+        <p class="breadcrumb"><a href="index.html">Home</a> · Sample report</p>
+
+        <p class="eyebrow">Instant preview</p>
+
+        <h1 id="page-title">See where you lose patient enquiries</h1>
+
+        <p class="hero-lead">Upload a WhatsApp chat export for a quick read — or load the <span data-clinic-short>Celestee</span> demo for walk-ins.</p>
+
+        <p class="report-mode-badge" data-clinic-mode hidden></p>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="section section--paper">
+
+      <div class="container report-layout">
+
+        <div class="report-panel" data-reveal>
+
+          <p class="eyebrow">Option A · Your data</p>
+
+          <h2>Upload WhatsApp export</h2>
+
+          <p class="panel-note">Phone → More → Export chat → Without media. Processed in your browser only.</p>
+
+          <form id="export-upload-form">
+
+            <label for="export-clinic-name">Clinic name</label>
+
+            <input type="text" id="export-clinic-name" class="input input--light" placeholder="Clinic name · area" data-clinic-prefill />
+
+            <label for="export-file">Chat export (.txt)</label>
+
+            <input type="file" id="export-file" class="input input--light" accept=".txt,text/plain" required />
+
+            <button type="submit" class="btn-primary btn-primary--light btn-block btn-spaced">Analyze export</button>
+
+          </form>
+
+        </div>
+
+        <div class="report-panel" data-reveal data-reveal-delay="1">
+
+          <p class="eyebrow">Option B · Demo</p>
+
+          <h2>Load clinic preview</h2>
+
+          <p class="panel-note">Edit <code>data/clinics.json</code> when you add outreach clinics.</p>
+
+          <label for="demo-clinic-select">Clinic</label>
+
+          <select id="demo-clinic-select" class="input input--light"></select>
+
+          <button type="button" id="load-demo-report" class="btn-outline btn-outline--light btn-block btn-spaced">Show demo report</button>
+
+          <p class="form-hint">Default: <span data-clinic-name>Celestee Skin Laser and Hair Clinic</span> · <span data-clinic-area>Jubilee Hills</span></p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="section" aria-live="polite">
+
+      <div class="container">
+
+        <div id="report-results" class="report-results" hidden></div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="cta-band">
+
+      <div class="container">
+
+        <h2 data-reveal>Want this every morning?</h2>
+
+        <p data-reveal data-reveal-delay="1">Book the free 7-day audit — we connect your phone and WhatsApp and send you a daily summary with staff names.</p>
+
+        <a href="audit.html" class="btn-primary" data-reveal data-reveal-delay="2">Book free audit</a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer class="site-footer">
+
+    <div class="container footer-bottom footer-bottom--compact">
+
+      <span>© 2026 Clinic Lead Recovery</span>
+
+      <a href="index.html" class="link-arrow">Back to home</a>
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="js/clinic-data.js"></script>
+
+  <script src="site.js"></script>
+
+</body>
+
+
+
+</html>
+

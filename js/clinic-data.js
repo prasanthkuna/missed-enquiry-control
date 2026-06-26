@@ -128,12 +128,12 @@
 
     if (audit.leaks && audit.leaks.length) {
       html += '<h3 class="report-subhead">Slow hot replies</h3>';
-      html += '<table class="report-table"><thead><tr><th>When</th><th>Intent</th><th>Wait</th><th>By</th></tr></thead><tbody>';
+      html += '<div class="table-scroll"><table class="report-table"><thead><tr><th>When</th><th>Intent</th><th>Wait</th><th>By</th></tr></thead><tbody>';
       audit.leaks.slice(0, 8).forEach(function (row) {
         html += "<tr><td>" + escapeHtml(row.day) + "</td><td>" + escapeHtml(row.intent) +
           "</td><td>" + escapeHtml(row.wait) + "</td><td>" + escapeHtml(row.by) + "</td></tr>";
       });
-      html += "</tbody></table>";
+      html += "</tbody></table></div>";
     }
 
     return html;
