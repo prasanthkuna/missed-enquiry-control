@@ -32,10 +32,10 @@
       if (!phone || !clinic) return;
 
       var message =
-        "Hi — I'd like the free 7-day leakage audit for my clinic.\n\n" +
+        "Hi — I'd like the free 7-day audit for my clinic.\n\n" +
         "Clinic: " + clinic + "\n" +
         "Clinic WhatsApp: +" + phone + "\n\n" +
-        "Interested in missed calls + WhatsApp recovery.";
+        "Interested in missed calls + WhatsApp follow-up.";
 
       window.open(
         "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(message),
@@ -223,7 +223,7 @@
       window.setInterval(function () {
         mins += 1;
         if (mins >= 15) {
-          el.textContent = "15m SLA";
+          el.textContent = "15m late";
           el.classList.add("is-due");
         } else {
           el.textContent = mins + "m";

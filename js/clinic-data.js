@@ -58,7 +58,7 @@
     var mode = opts.mode || (opts.compact ? "compact" : "full");
     var lines = [];
 
-    lines.push('<span class="line-muted">📋 ' + escapeHtml(clinic.name) + " — WhatsApp Daily Digest</span>");
+    lines.push('<span class="line-muted">📋 ' + escapeHtml(clinic.name) + " — Daily Summary</span>");
     lines.push('<span class="line-muted">📅 ' + escapeHtml(d.dateLabel) + "</span>");
     lines.push("");
     lines.push(digestLine("━━━━━━━━━━━━━━━━━━━━", "line-muted"));
@@ -66,16 +66,16 @@
     if (mode === "full") {
       lines.push(digestLine("📊 SUMMARY", "line-strong"));
       lines.push(digestLine("Total enquiries: " + d.totalEnquiries));
-      lines.push(digestLine("Hot leads: " + d.hotLeads + " · Price asked: " + d.priceAsked));
+      lines.push(digestLine("Serious enquiries: " + d.hotLeads + " · Price asked: " + d.priceAsked));
     } else {
       lines.push(digestLine(
-        "Total enquiries: " + d.totalEnquiries + " · Hot leads: " + d.hotLeads
+        "Total enquiries: " + d.totalEnquiries + " · Serious enquiries: " + d.hotLeads
       ));
     }
 
     lines.push("");
     if (mode === "full") {
-      lines.push('<span class="line-alert">🚨 SLA BREACHES</span>');
+      lines.push('<span class="line-alert">🚨 SLOW REPLIES (15 min rule)</span>');
       lines.push(digestLine("Not replied within 15 min: " + d.slaBreaches));
     } else {
       lines.push('<span class="line-alert">🚨 Not replied within 15 min: ' + d.slaBreaches + "</span>");
@@ -407,12 +407,12 @@
       "</div>" +
       renderAuditMetrics(audit, clinic, sourceLabel) +
       '<div class="report-digest-wrap">' +
-      '<h3 class="report-subhead">Sample owner digest</h3>' +
+      '<h3 class="report-subhead">Sample daily summary</h3>' +
       '<div class="digest-preview" id="report-digest"></div>' +
       "</div>" +
       '<div class="report-actions">' +
       '<a href="audit.html" class="button-primary">Book full audit on WhatsApp</a>' +
-      '<a href="digest.html" class="button-outline-on-dark">See digest walkthrough</a>' +
+      '<a href="digest.html" class="button-outline-on-dark">See daily summary</a>' +
       "</div>";
     var digestEl = document.getElementById("report-digest");
     if (digestEl) {
