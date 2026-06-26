@@ -286,6 +286,9 @@
     document.querySelectorAll("[data-clinic-proof-hour]").forEach(function (el) {
       el.textContent = p.digestHour;
     });
+    document.querySelectorAll("[data-clinic-proof-missed]").forEach(function (el) {
+      el.textContent = p.missedCallRecoveryPct != null ? p.missedCallRecoveryPct : 71;
+    });
   }
 
   function hydrateClinicLabels(clinic) {

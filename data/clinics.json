@@ -21,7 +21,8 @@
         "responseBeforeMin": 38,
         "responseAfterMin": 11,
         "slaMinutes": 15,
-        "digestHour": 8
+        "digestHour": 8,
+        "missedCallRecoveryPct": 71
       },
       "digest": {
         "dateLabel": "27 May 2026 · Yesterday's enquiries",
@@ -82,7 +83,8 @@
         "responseBeforeMin": 32,
         "responseAfterMin": 8,
         "slaMinutes": 15,
-        "digestHour": 8
+        "digestHour": 8,
+        "missedCallRecoveryPct": 68
       },
       "digest": {
         "dateLabel": "27 May · Yesterday",

@@ -2,10 +2,6 @@
   "use strict";
 
   var WHATSAPP = "919008393030";
-  var SITE = {
-    whatsapp: WHATSAPP,
-    base: ""
-  };
 
   /* ——— Mobile nav ——— */
   var toggle = document.getElementById("nav-toggle");
@@ -38,9 +34,10 @@
       if (!phone || !clinic) return;
 
       var message =
-        "Hi — I'd like the free 7-day WhatsApp leakage audit for my derma clinic.\n\n" +
+        "Hi — I'd like the free 7-day leakage audit for my clinic.\n\n" +
         "Clinic: " + clinic + "\n" +
-        "Clinic WhatsApp: +" + phone;
+        "Clinic WhatsApp: +" + phone + "\n\n" +
+        "Interested in missed calls + WhatsApp recovery.";
 
       window.open(
         "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(message),
@@ -50,10 +47,10 @@
     });
   });
 
-  /* ——— Sticky nav + mobile CTA bar ——— */
-  var header = document.querySelector(".top-nav-on-dark");
+  /* ——— Sticky nav + mobile CTA ——— */
+  var header = document.getElementById("site-header");
   var stickyCta = document.getElementById("sticky-cta");
-  var hero = document.querySelector(".hero-band-cinema, .page-hero-compact");
+  var hero = document.querySelector(".hero, .page-hero");
 
   function onScroll() {
     var y = window.scrollY || document.documentElement.scrollTop;
@@ -92,7 +89,6 @@
         revealObs.observe(el);
       });
 
-      /* Reveal anything already on screen immediately */
       window.requestAnimationFrame(function () {
         revealEls.forEach(function (el) {
           var rect = el.getBoundingClientRect();
@@ -108,7 +104,6 @@
       });
     }
 
-    /* Safety net — never leave sections invisible */
     window.setTimeout(function () {
       document.querySelectorAll("[data-reveal]").forEach(function (el) {
         el.classList.add("is-visible");
@@ -169,6 +164,28 @@
   initCounters();
   document.addEventListener("clinic:hydrated", initCounters);
 
+  /* ——— Product demo tabs ——— */
+  document.querySelectorAll("[data-product-demo]").forEach(function (root) {
+    var tabs = root.querySelectorAll(".product-tab");
+    var panels = root.querySelectorAll(".product-panel");
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var id = tab.getAttribute("data-tab");
+        tabs.forEach(function (t) {
+          var active = t === tab;
+          t.classList.toggle("is-active", active);
+          t.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        panels.forEach(function (panel) {
+          var show = panel.getAttribute("data-panel") === id;
+          panel.classList.toggle("is-active", show);
+          panel.hidden = !show;
+        });
+      });
+    });
+  });
+
   /* ——— Carousels ——— */
   document.querySelectorAll("[data-carousel]").forEach(function (root) {
     var track = root.querySelector(".carousel-track");
@@ -212,45 +229,5 @@
 
     if (prevBtn) prevBtn.addEventListener("click", function () { goTo(index - 1); });
     if (nextBtn) nextBtn.addEventListener("click", function () { goTo(index + 1); });
-
-    track.addEventListener(
-      "scroll",
-      function () {
-        var closest = 0;
-        var minDist = Infinity;
-        slides.forEach(function (slide, i) {
-          var dist = Math.abs(track.scrollLeft - slide.offsetLeft);
-          if (dist < minDist) {
-            minDist = dist;
-            closest = i;
-          }
-        });
-        if (closest !== index) {
-          index = closest;
-          updateDots();
-        }
-      },
-      { passive: true }
-    );
   });
-
-  /* ——— Parallax on cinematic bands ——— */
-  if (!reducedMotion) {
-    var parallaxBands = document.querySelectorAll(".band-cinema-wide[data-parallax]");
-    if (parallaxBands.length) {
-      function parallaxTick() {
-        var vh = window.innerHeight;
-        parallaxBands.forEach(function (band) {
-          var img = band.querySelector("img");
-          if (!img) return;
-          var rect = band.getBoundingClientRect();
-          if (rect.bottom < 0 || rect.top > vh) return;
-          var center = (rect.top + rect.height * 0.5 - vh * 0.5) / vh;
-          img.style.transform = "translate3d(0, " + (center * 18).toFixed(1) + "px, 0)";
-        });
-      }
-      window.addEventListener("scroll", parallaxTick, { passive: true });
-      parallaxTick();
-    }
-  }
 })();

@@ -1,20 +1,25 @@
-# Missed Enquiry Control
+# Clinic Lead Recovery — Landing Site
 
-Landing site for **Missed Enquiry Control** — done-for-you WhatsApp revenue ops for derma and aesthetic clinics in Hyderabad.
+Marketing site for **Clinic Lead Recovery OS** — missed calls + WhatsApp accountability for Hyderabad aesthetic clinics.
 
-**Live site:** [https://prasanthkuna.github.io/missed-enquiry-control/](https://prasanthkuna.github.io/missed-enquiry-control/)
+**Live:** [https://prasanthkuna.github.io/missed-enquiry-control/](https://prasanthkuna.github.io/missed-enquiry-control/)
 
-## GitHub Pages
+## v3 design
 
-This repo deploys via **GitHub Actions** on every push to `main`.
+Code-first UI — no raster photography. Typography (Instrument Serif + DM Sans), CSS gradient mesh hero, live digest mock, product tab demo.
 
-**One-time setup:**
-
-1. Open [Settings → Pages](https://github.com/prasanthkuna/missed-enquiry-control/settings/pages)
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. After the first workflow run, the site is live at the URL below
-
-Alternatively, use **Deploy from branch** → `main` → `/ (root)` if you prefer branch-based hosting.
+| File | Purpose |
+|------|---------|
+| `index.html` | Homepage |
+| `audit.html` | Free audit booking |
+| `digest.html` | Owner digest demo |
+| `report.html` | WhatsApp export analyzer + clinic demo |
+| `tokens.css` | Design tokens |
+| `styles.css` | Layout + global |
+| `components.css` | Product UI components |
+| `site.js` | Nav, forms, tabs, reveal |
+| `js/clinic-data.js` | Demo clinic data hydration |
+| `data/clinics.json` | Demo/report data source |
 
 ## Local preview
 
@@ -25,19 +30,6 @@ python -m http.server 8080
 
 Open [http://localhost:8080](http://localhost:8080)
 
-## Contact
+## Deploy
 
-WhatsApp: [+91 90083 93030](https://wa.me/919008393030)
-
-## Structure
-
-| Path | Purpose |
-|------|---------|
-| `index.html` | Homepage — full editorial scroll |
-| `digest.html` | Digest product demo + carousel |
-| `audit.html` | Free audit booking + walk-in preview |
-| `site.js` | Nav, carousel, scroll reveal, stat counters |
-| `tokens.css` / `styles.css` | Design system + layout |
-| `assets/` | Images (hero, bands, social meta, etc.) |
-| `design.md` | Design notes |
-| `image-assets.md` | Asset spec and prompts |
+Push to `missed-enquiry-control` repo → GitHub Pages (Actions).
