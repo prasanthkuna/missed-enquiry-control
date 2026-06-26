@@ -322,10 +322,14 @@ a {
   flex-wrap: wrap;
   gap: 0.75rem;
   align-items: center;
+}
+
+.js .hero-ctas:not(.is-visible) {
   opacity: 0;
 }
 
-.hero-ctas.is-visible {
+.hero-ctas.is-visible,
+.no-js .hero-ctas {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
