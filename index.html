@@ -27,7 +27,7 @@
   <script>document.documentElement.classList.add("js");</script>
 </head>
 
-<body class="has-sticky-cta">
+<body class="has-sticky-cta theme-light">
   <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Clinic Lead Recovery home">
@@ -43,7 +43,7 @@
         </ul>
       </nav>
       <div class="nav-actions">
-        <a href="audit.html" class="btn-primary">Free audit</a>
+        <a href="audit.html" class="btn-accent">Free audit</a>
         <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="nav-toggle">
           <span></span><span></span><span></span>
         </button>
@@ -64,29 +64,28 @@
   </div>
 
   <main>
-    <section class="hero section--dark" aria-labelledby="hero-title">
-      <div class="hero-mesh" aria-hidden="true"></div>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="container hero-layout">
+    <section class="hero hero--editorial" aria-labelledby="hero-title">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="container hero-layout hero-layout--product-first">
         <div class="hero-copy">
-          <p class="hero-urgency">Free 7-day audit · 3 slots this month · same-day WhatsApp reply</p>
-          <p class="eyebrow">Hyderabad · Skin, hair, dental &amp; aesthetic</p>
-          <h1 id="hero-title">Your clinic loses high-ticket bookings to calls nobody called back.</h1>
-          <p class="funnel-line">
-            <strong>Free audit</strong> → leakage report → <strong>14-day pilot ₹9,999</strong> → ₹14,999/mo
-          </p>
+          <p class="hero-badge"><span class="hero-badge-dot"></span> 3 audit slots · Hyderabad clinics</p>
+          <h1 id="hero-title">Every missed call should become a booked appointment — not a lost lead.</h1>
           <p class="hero-lead">
-            Missed phone calls and cold WhatsApp chats — captured, assigned, and reported to the owner every morning at 8 AM with staff names.
+            We capture missed calls and WhatsApp enquiries, assign callbacks to your team, and send the owner a daily digest at 8 AM — with staff names, not anonymous stats.
+          </p>
+          <p class="funnel-line">
+            Free audit → leakage report → <strong>14-day pilot ₹9,999</strong> → ₹14,999/mo
           </p>
           <div class="hero-ctas" id="hero-ctas">
             <a href="audit.html" class="btn-primary">Get my leakage report</a>
             <a href="report.html?demo=1" class="btn-outline">Check your clinic</a>
           </div>
-          <p class="hero-reply">Same WhatsApp number · Owner never opens a CRM</p>
+          <p class="hero-reply">Same WhatsApp number · Meta API · Owner never opens a CRM</p>
         </div>
 
-        <div class="hero-composite" aria-label="Recovery desk preview">
-          <div class="browser-frame">
+        <div class="hero-showcase" aria-label="Recovery desk preview">
+          <div class="showcase-stack">
+            <div class="browser-frame browser-frame--light showcase-browser">
             <div class="browser-chrome">
               <div class="browser-dots"><i></i><i></i><i></i></div>
               <div class="browser-url">app.clinicleadrecovery.in/callbacks</div>
@@ -128,7 +127,7 @@
             </div>
           </div>
 
-          <div class="phone-frame" data-hero-phone aria-label="Sample 8 AM digest">
+          <div class="phone-frame phone-frame--float" data-hero-phone aria-label="Sample 8 AM digest">
             <div class="phone-notch" aria-hidden="true"></div>
             <div class="phone-screen">
               <div class="phone-status" id="hero-time"><span>8:00 AM</span><span>Owner digest</span></div>
@@ -145,6 +144,8 @@
               </div>
             </div>
           </div>
+          </div>
+          <p class="showcase-caption">Live preview · Callback desk + owner digest</p>
         </div>
       </div>
     </section>
@@ -163,9 +164,9 @@
     <section class="section section--paper" id="deliverables" aria-labelledby="deliverables-title">
       <div class="container">
         <div class="section-head centered" data-reveal>
-          <p class="eyebrow" style="color: var(--color-primary)">Everything included</p>
+          <p class="eyebrow">Everything included</p>
           <h2 id="deliverables-title">What you get — by category</h2>
-          <p>Eight parts of the Recovery OS. No CRM login for the owner.</p>
+          <p>Eight parts of the platform. No CRM login for the owner.</p>
         </div>
         <div class="deliverable-grid" data-reveal data-reveal-delay="1">
           <article class="deliverable-card">
@@ -236,7 +237,7 @@
       </div>
     </section>
 
-    <section class="section section--dark" id="product" aria-labelledby="product-title">
+    <section class="section section--product-dark" id="product" aria-labelledby="product-title">
       <div class="container">
         <div class="section-head" data-reveal>
           <p class="eyebrow">The morning leakage brief</p>
@@ -377,7 +378,7 @@
       </div>
     </section>
 
-    <section class="section section--dark section--tight" id="proof" aria-labelledby="proof-title">
+    <section class="section section--paper section--tight" id="proof" aria-labelledby="proof-title">
       <div class="container">
         <div class="section-head centered" data-reveal>
           <p class="eyebrow">Operational proof</p>
@@ -465,7 +466,7 @@
       </div>
     </section>
 
-    <section class="cta-band" id="audit" aria-labelledby="audit-title">
+    <section class="section section--paper cta-band" id="audit" aria-labelledby="audit-title">
       <div class="container">
         <h2 id="audit-title" data-reveal>Free 7-day leakage audit — 3 slots this month</h2>
         <p data-reveal data-reveal-delay="1">Missed calls, slow WhatsApp, unfollowed price enquiries — mapped before you spend on software. We reply same day on WhatsApp.</p>
