@@ -1,0 +1,30 @@
+:root {
+  /* Brand primitives — never use directly in components */
+  --clr-cream-50: #faf8f5;
+  --clr-cream-100: #f5f1ec;
+  --clr-ink-900: #111111;
+  --clr-ink-700: #27272a;
+  --clr-ink-500: #52525b;
+  --clr-ink-400: #71717a;
+  --clr-white: #ffffff;
+
+  --clr-accent-500: #ff5600;
+  --clr-accent-600: #e04d00;
+  --clr-recovery-500: #3ecf8e;
+  --clr-recovery-600: #059669;
+  --clr-warning-500: #f59e0b;
+  --clr-warning-700: #b45309;
+  --clr-danger-500: #ef4444;
+  --clr-danger-700: #b91c1c;
+
+  --clr-wa-incoming: #2a3942;
+  --clr-wa-outgoing: #005c4b;
+  --clr-wa-text: #e9edef;
+  --clr-wa-text-muted: rgba(233, 237, 239, 0.72);
+
+  --clr-mock-900: #0f0f11;
+  --clr-mock-850: #0c0c0e;
+  --clr-mock-800: #18181b;
+  --clr-mock-700: #27272a;
+  --clr-mock-600: #3f3f46;
+}

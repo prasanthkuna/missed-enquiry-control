@@ -48,6 +48,10 @@
       .replace(/"/g, "&quot;");
   }
 
+  function digestLine(text, cls) {
+    return '<span class="' + (cls || "line-body") + '">' + text + "</span>";
+  }
+
   function renderDigestHtml(clinic, opts) {
     opts = opts || {};
     var d = clinic.digest;
@@ -57,46 +61,46 @@
     lines.push('<span class="line-muted">📋 ' + escapeHtml(clinic.name) + " — WhatsApp Daily Digest</span>");
     lines.push('<span class="line-muted">📅 ' + escapeHtml(d.dateLabel) + "</span>");
     lines.push("");
-    lines.push("━━━━━━━━━━━━━━━━━━━━");
+    lines.push(digestLine("━━━━━━━━━━━━━━━━━━━━", "line-muted"));
 
     if (mode === "full") {
-      lines.push("📊 SUMMARY");
-      lines.push("Total enquiries: " + d.totalEnquiries);
-      lines.push("Hot leads: " + d.hotLeads + " · Price asked: " + d.priceAsked);
+      lines.push(digestLine("📊 SUMMARY", "line-strong"));
+      lines.push(digestLine("Total enquiries: " + d.totalEnquiries));
+      lines.push(digestLine("Hot leads: " + d.hotLeads + " · Price asked: " + d.priceAsked));
     } else {
-      lines.push(
+      lines.push(digestLine(
         "Total enquiries: " + d.totalEnquiries + " · Hot leads: " + d.hotLeads
-      );
+      ));
     }
 
     lines.push("");
     if (mode === "full") {
       lines.push('<span class="line-alert">🚨 SLA BREACHES</span>');
-      lines.push("Not replied within 15 min: " + d.slaBreaches);
+      lines.push(digestLine("Not replied within 15 min: " + d.slaBreaches));
     } else {
       lines.push('<span class="line-alert">🚨 Not replied within 15 min: ' + d.slaBreaches + "</span>");
     }
     d.breaches.forEach(function (b) {
-      lines.push("→ " + escapeHtml(b.staff) + ": " + b.delays.join(", "));
+      lines.push(digestLine("→ " + escapeHtml(b.staff) + ": " + b.delays.join(", ")));
     });
 
     if (d.priceNoFollowUp) {
       lines.push("");
-      lines.push("Price shared, no 24hr follow-up: " + d.priceNoFollowUp);
+      lines.push(digestLine("Price shared, no 24hr follow-up: " + d.priceNoFollowUp));
     }
 
     lines.push("");
-    lines.push(mode === "full" ? "📞 ACTION TODAY (call before 12 PM)" : "📞 Call before 12 PM:");
+    lines.push(digestLine(mode === "full" ? "📞 ACTION TODAY (call before 12 PM)" : "📞 Call before 12 PM:", "line-strong"));
     d.callList.forEach(function (item, i) {
-      lines.push((i + 1) + ". " + escapeHtml(item));
+      lines.push(digestLine((i + 1) + ". " + escapeHtml(item)));
     });
 
     lines.push("");
-    lines.push(
+    lines.push(digestLine(
       "Worst delay: " + d.worstDelayMin + " min · " + escapeHtml(d.worstStaff)
-    );
+    ));
     if (mode === "full") {
-      lines.push("vs last week avg: " + d.weekAvgBefore + " min → " + d.weekAvgAfter + " min ↓");
+      lines.push(digestLine("vs last week avg: " + d.weekAvgBefore + " min → " + d.weekAvgAfter + " min ↓", "line-muted"));
     }
 
     return lines.join("\n");

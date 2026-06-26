@@ -1,0 +1,26 @@
+[data-theme="mock"],
+.browser-body,
+.phone-screen,
+.inbox-mock {
+  --mock-bg: var(--clr-mock-900);
+  --mock-surface: var(--clr-mock-800);
+  --mock-surface-raised: var(--clr-mock-700);
+  --mock-border: var(--clr-mock-600);
+  --mock-ink: #fafafa;
+  --mock-body: #e4e4e7;
+  --mock-muted: #d4d4d8;
+  --mock-card: var(--clr-white);
+  --mock-card-text: var(--clr-ink-900);
+  --mock-card-body: var(--clr-ink-500);
+  --mock-card-muted: var(--clr-ink-400);
+
+  --mock-alert-border: var(--clr-danger-500);
+  --mock-alert-bg: #fff5f5;
+  --mock-warn-border: var(--clr-warning-500);
+  --mock-warn-bg: #fffbeb;
+
+  --mock-wa-in: var(--clr-wa-incoming);
+  --mock-wa-out: var(--clr-wa-outgoing);
+  --mock-wa-text: var(--clr-wa-text);
+  --mock-wa-text-muted: var(--clr-wa-text-muted);
+}

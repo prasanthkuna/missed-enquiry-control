@@ -1,0 +1,21 @@
+:root,
+[data-theme="marketing"] {
+  --surface-background: var(--clr-cream-100);
+  --surface-background-raised: var(--clr-cream-50);
+  --surface-background-card: var(--clr-white);
+  --surface-border: #e4e0d8;
+  --surface-border-soft: #d3cec6;
+  --surface-text: var(--clr-ink-900);
+  --surface-text-subtle: var(--clr-ink-500);
+  --surface-text-muted: var(--clr-ink-400);
+
+  --action-background-primary: var(--clr-ink-900);
+  --action-background-primary-hover: var(--clr-ink-700);
+  --action-background-accent: var(--clr-accent-500);
+  --action-background-accent-hover: var(--clr-accent-600);
+  --action-text-on-primary: var(--clr-white);
+
+  --feedback-text-positive: var(--clr-recovery-600);
+  --feedback-text-negative: var(--clr-danger-700);
+  --feedback-text-notice: var(--clr-warning-700);
+}

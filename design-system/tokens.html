@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="marketing">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design tokens · Clinic Lead Recovery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    body { font-family: Outfit, sans-serif; background: var(--color-canvas); color: var(--color-ink); padding: 2rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    p.lead { color: var(--color-body); margin-bottom: 2rem; max-width: 60ch; }
+    section { margin-bottom: 2.5rem; }
+    h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-muted); margin-bottom: 1rem; }
+    .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+    .swatch { border-radius: 10px; overflow: hidden; border: 1px solid var(--color-border); background: #fff; }
+    .swatch-color { height: 64px; }
+    .swatch-meta { padding: 8px 10px; font-size: 0.75rem; }
+    .swatch-meta code { font-family: "IBM Plex Mono", monospace; font-size: 0.65rem; color: var(--color-muted); }
+    .mock-demo { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .mock-panel { border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); }
+    .mock-panel header { padding: 8px 12px; font: 600 0.6875rem/1 "IBM Plex Mono"; letter-spacing: 0.08em; text-transform: uppercase; background: #0c0c0e; color: #fafafa; }
+  </style>
+  <link rel="stylesheet" href="components.css" />
+</head>
+<body>
+  <h1>Clinic Lead Recovery — design tokens</h1>
+  <p class="lead">Blade-style layers: primitives → semantics (marketing / product / mock) → components. v6.</p>
+
+  <section>
+    <h2>Marketing palette</h2>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-color" style="background:#f5f1ec"></div><div class="swatch-meta">Canvas<br><code>--clr-cream-100</code></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#111111"></div><div class="swatch-meta">Primary action<br><code>--clr-ink-900</code></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#ff5600"></div><div class="swatch-meta">Audit accent<br><code>--clr-accent-500</code></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#3ecf8e"></div><div class="swatch-meta">Recovery<br><code>--clr-recovery-500</code></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mock UI contrast (product previews)</h2>
+    <div class="mock-demo">
+      <div class="mock-panel">
+        <header>Callback board · due now</header>
+        <div class="browser-body browser-body--board" data-theme="mock" style="min-height:auto">
+          <div class="board-columns" style="padding:12px">
+            <div>
+              <div class="board-col-head">Due now <span class="count">1</span></div>
+              <div class="board-card is-overdue">
+                <div class="board-card-top"><strong>+91 96xxx</strong><span class="tag is-warn">30m</span></div>
+                <p>Missed call · Full body laser</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mock-panel">
+        <header>WhatsApp inbox</header>
+        <div class="browser-body" data-theme="mock" style="min-height:auto;padding:0">
+          <div class="inbox-mock" style="min-height:200px">
+            <aside class="inbox-sidebar" style="width:100%">
+              <div class="inbox-sidebar-head">Today · 12 open</div>
+              <div class="inbox-thread">
+                <div class="inbox-thread-item"><strong>+91 98xxx</strong><span>Full body laser cost?</span>
+                  <div class="inbox-thread-meta"><span class="tag is-hot">Hot</span><span class="tag is-warn">14m</span></div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <div class="mock-panel">
+        <header>Chat bubbles</header>
+        <div class="inbox-messages" data-theme="mock" style="min-height:160px">
+          <div class="msg-bubble in">Hi, laser cost for 6 sessions?<div class="msg-time">6:14 PM</div></div>
+          <div class="msg-bubble out">Thanks for reaching Celestee!<div class="msg-time">6:18 PM · Priya</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

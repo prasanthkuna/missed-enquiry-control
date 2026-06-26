@@ -1,42 +1,40 @@
+@import url("design-system/index.css");
+
 :root {
-  /* Intercom cream canvas */
-  --color-canvas: #f5f1ec;
-  --color-canvas-paper: #faf8f5;
-  --color-canvas-light: #ffffff;
-  --color-canvas-dark: #111111;
-  --color-canvas-elevated: #ffffff;
-  --color-canvas-card: #ffffff;
+  /* Legacy aliases → semantic marketing tokens */
+  --color-canvas: var(--surface-background);
+  --color-canvas-paper: var(--surface-background-raised);
+  --color-canvas-light: var(--surface-background-card);
+  --color-canvas-dark: var(--clr-ink-900);
+  --color-canvas-elevated: var(--surface-background-card);
+  --color-canvas-card: var(--surface-background-card);
 
-  /* Linear zinc ink */
-  --color-ink: #111111;
-  --color-body: #52525b;
-  --color-body-strong: #27272a;
-  --color-muted: #71717a;
-  --color-on-primary: #ffffff;
+  --color-ink: var(--surface-text);
+  --color-body: var(--surface-text-subtle);
+  --color-body-strong: var(--clr-ink-700);
+  --color-muted: var(--surface-text-muted);
+  --color-on-primary: var(--action-text-on-primary);
 
-  --color-ink-paper: #111111;
-  --color-body-paper: #52525b;
-  --color-muted-paper: #71717a;
+  --color-ink-paper: var(--surface-text);
+  --color-body-paper: var(--surface-text-subtle);
+  --color-muted-paper: var(--surface-text-muted);
 
-  /* Accent: Intercom orange — one CTA moment only (not Ferrari red) */
-  --color-accent: #ff5600;
-  --color-accent-hover: #e04d00;
-  --color-accent-muted: rgba(255, 86, 0, 0.1);
+  --color-accent: var(--action-background-accent);
+  --color-accent-hover: var(--action-background-accent-hover);
+  --color-accent-muted: rgba(255, 86, 0, 0.12);
 
-  /* Primary actions = Linear black pill */
-  --color-primary: #111111;
-  --color-primary-hover: #27272a;
+  --color-primary: var(--action-background-primary);
+  --color-primary-hover: var(--action-background-primary-hover);
   --color-primary-muted: rgba(17, 17, 17, 0.06);
 
-  --color-border: #e4e0d8;
-  --color-border-soft: #d3cec6;
-  --color-border-paper: #e4e0d8;
+  --color-border: var(--surface-border);
+  --color-border-soft: var(--surface-border-soft);
+  --color-border-paper: var(--surface-border);
   --color-border-dark: #2a2a2e;
 
-  /* Supabase recovery green — inside product UI only */
-  --color-recovery: #3ecf8e;
-  --color-warning: #f5a623;
-  --color-danger: #ef4444;
+  --color-recovery: var(--clr-recovery-500);
+  --color-warning: var(--clr-warning-500);
+  --color-danger: var(--clr-danger-500);
 
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --font-sans: "Outfit", system-ui, sans-serif;
@@ -58,27 +56,9 @@
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-pill: 999px;
-  --shadow-card: 0 2px 4px rgba(17, 17, 17, 0.04), 0 12px 40px rgba(17, 17, 17, 0.08);
-  --shadow-paper: 0 1px 2px rgba(17, 17, 17, 0.04);
-  --shadow-float: 0 24px 80px rgba(17, 17, 17, 0.14), 0 8px 24px rgba(17, 17, 17, 0.06);
-  --shadow-product: 0 32px 100px rgba(0, 0, 0, 0.35);
 
-  /* Dark product mocks (browser body, phone screen, inbox) */
-  --mock-bg: #0f0f11;
-  --mock-surface: #18181b;
-  --mock-surface-raised: #27272a;
-  --mock-border: #3f3f46;
-  --mock-ink: #fafafa;
-  --mock-body: #d4d4d8;
-  --mock-muted: #a1a1aa;
-  --mock-card: #ffffff;
-  --mock-danger-bg: #450a0a;
-  --mock-danger-border: #f87171;
-  --mock-danger-text: #fecaca;
-  --mock-warn-bg: #422006;
-  --mock-warn-border: #fbbf24;
-  --mock-warn-text: #fde68a;
-  --mock-success-bg: rgba(62, 207, 142, 0.18);
-  --mock-success-border: rgba(62, 207, 142, 0.45);
-  --mock-success-text: #bbf7d0;
+  --shadow-card: var(--elevation-2);
+  --shadow-paper: var(--elevation-1);
+  --shadow-float: var(--elevation-3);
+  --shadow-product: var(--elevation-4);
 }
