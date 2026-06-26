@@ -3,7 +3,6 @@
 
   var WHATSAPP = "919008393030";
 
-  /* ——— Mobile nav ——— */
   var toggle = document.getElementById("nav-toggle");
   var menu = document.getElementById("mobile-menu");
 
@@ -23,7 +22,6 @@
     });
   }
 
-  /* ——— Audit form → WhatsApp ——— */
   document.querySelectorAll("[data-audit-form]").forEach(function (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -47,18 +45,13 @@
     });
   });
 
-  /* ——— Sticky nav + mobile CTA ——— */
   var header = document.getElementById("site-header");
   var stickyCta = document.getElementById("sticky-cta");
-  var hero = document.querySelector(".hero, .page-hero");
+  var hero = document.querySelector(".hero");
 
   function onScroll() {
     var y = window.scrollY || document.documentElement.scrollTop;
-
-    if (header) {
-      header.classList.toggle("is-scrolled", y > 24);
-    }
-
+    if (header) header.classList.toggle("is-scrolled", y > 24);
     if (stickyCta && hero) {
       var heroBottom = hero.offsetTop + hero.offsetHeight;
       stickyCta.classList.toggle("is-visible", y > heroBottom - 80);
@@ -68,9 +61,46 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ——— Scroll reveal ——— */
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ——— Hero intro sequence ——— */
+  function runHeroIntro() {
+    var rows = document.querySelectorAll("[data-hero-row]");
+    var progress = document.getElementById("hero-progress");
+    var progressFill = document.getElementById("hero-progress-fill");
+    var ctas = document.getElementById("hero-ctas");
+    var alertRow = document.querySelector("[data-hero-alert]");
+
+    if (reducedMotion) {
+      rows.forEach(function (r) { r.classList.add("is-visible"); });
+      if (progress) progress.classList.add("is-visible");
+      if (progressFill) progressFill.classList.add("is-visible");
+      if (ctas) ctas.classList.add("is-visible");
+      return;
+    }
+
+    rows.forEach(function (row, i) {
+      window.setTimeout(function () {
+        row.classList.add("is-visible");
+        if (row === alertRow) row.classList.add("is-pulse");
+      }, 400 + i * 180);
+    });
+
+    window.setTimeout(function () {
+      if (progress) progress.classList.add("is-visible");
+      if (progressFill) progressFill.classList.add("is-visible");
+    }, 400 + rows.length * 180 + 200);
+
+    window.setTimeout(function () {
+      if (ctas) ctas.classList.add("is-visible");
+    }, 400 + rows.length * 180 + 500);
+  }
+
+  if (document.querySelector("[data-hero-row]")) {
+    runHeroIntro();
+  }
+
+  /* ——— Scroll reveal ——— */
   if (!reducedMotion) {
     var revealEls = document.querySelectorAll("[data-reveal]");
     if (revealEls.length && "IntersectionObserver" in window) {
@@ -85,9 +115,7 @@
         },
         { rootMargin: "0px 0px -5% 0px", threshold: 0.08 }
       );
-      revealEls.forEach(function (el) {
-        revealObs.observe(el);
-      });
+      revealEls.forEach(function (el) { revealObs.observe(el); });
 
       window.requestAnimationFrame(function () {
         revealEls.forEach(function (el) {
@@ -99,16 +127,14 @@
         });
       });
     } else {
-      revealEls.forEach(function (el) {
-        el.classList.add("is-visible");
-      });
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
     }
 
     window.setTimeout(function () {
       document.querySelectorAll("[data-reveal]").forEach(function (el) {
         el.classList.add("is-visible");
       });
-    }, 2000);
+    }, 2500);
   } else {
     document.querySelectorAll("[data-reveal]").forEach(function (el) {
       el.classList.add("is-visible");
@@ -119,7 +145,6 @@
   function animateCount(el, target, duration) {
     var start = 0;
     var startTime = null;
-
     function step(ts) {
       if (!startTime) startTime = ts;
       var progress = Math.min((ts - startTime) / duration, 1);
@@ -127,7 +152,6 @@
       el.textContent = Math.round(start + (target - start) * eased);
       if (progress < 1) requestAnimationFrame(step);
     }
-
     requestAnimationFrame(step);
   }
 
@@ -135,15 +159,12 @@
     document.querySelectorAll("[data-count-to]").forEach(function (el) {
       var target = parseInt(el.getAttribute("data-count-to"), 10);
       if (isNaN(target)) return;
-
       if (reducedMotion || !("IntersectionObserver" in window)) {
         el.textContent = target;
         return;
       }
-
       if (el.dataset.countStarted === "1") return;
       el.dataset.countStarted = "1";
-
       var counted = false;
       var counterObs = new IntersectionObserver(
         function (entries) {
@@ -164,70 +185,50 @@
   initCounters();
   document.addEventListener("clinic:hydrated", initCounters);
 
-  /* ——— Product demo tabs ——— */
-  document.querySelectorAll("[data-product-demo]").forEach(function (root) {
-    var tabs = root.querySelectorAll(".product-tab");
-    var panels = root.querySelectorAll(".product-panel");
-
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        var id = tab.getAttribute("data-tab");
-        tabs.forEach(function (t) {
-          var active = t === tab;
-          t.classList.toggle("is-active", active);
-          t.setAttribute("aria-selected", active ? "true" : "false");
-        });
-        panels.forEach(function (panel) {
-          var show = panel.getAttribute("data-panel") === id;
-          panel.classList.toggle("is-active", show);
-          panel.hidden = !show;
-        });
-      });
+  /* ——— Chapter nav scroll spy ——— */
+  var chapterNav = document.querySelector("[data-chapter-nav]");
+  if (chapterNav && "IntersectionObserver" in window) {
+    var chapterLinks = chapterNav.querySelectorAll("[data-chapter-link]");
+    var chapterIds = [];
+    chapterLinks.forEach(function (link) {
+      var id = (link.getAttribute("href") || "").replace("#", "");
+      if (id) chapterIds.push(id);
     });
-  });
 
-  /* ——— Carousels ——— */
-  document.querySelectorAll("[data-carousel]").forEach(function (root) {
-    var track = root.querySelector(".carousel-track");
-    var slides = root.querySelectorAll(".carousel-slide");
-    var dotsWrap = root.querySelector(".carousel-dots");
-    var prevBtn = root.querySelector("[data-carousel-prev]");
-    var nextBtn = root.querySelector("[data-carousel-next]");
-    if (!track || !slides.length) return;
-
-    var index = 0;
-    track.scrollLeft = 0;
-
-    function goTo(i) {
-      index = (i + slides.length) % slides.length;
-      var slide = slides[index];
-      track.scrollTo({ left: slide.offsetLeft, behavior: reducedMotion ? "auto" : "smooth" });
-      updateDots();
-    }
-
-    function updateDots() {
-      if (!dotsWrap) return;
-      dotsWrap.querySelectorAll("button").forEach(function (btn, i) {
-        btn.classList.toggle("is-active", i === index);
-        btn.setAttribute("aria-selected", i === index ? "true" : "false");
-      });
-    }
-
-    if (dotsWrap) {
-      slides.forEach(function (_, i) {
-        var btn = document.createElement("button");
-        btn.type = "button";
-        btn.setAttribute("role", "tab");
-        btn.setAttribute("aria-label", "Slide " + (i + 1));
-        btn.addEventListener("click", function () {
-          goTo(i);
+    var chapterObs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            chapterLinks.forEach(function (link) {
+              var active = (link.getAttribute("href") || "") === "#" + id;
+              link.classList.toggle("is-active", active);
+            });
+          }
         });
-        dotsWrap.appendChild(btn);
-      });
-      updateDots();
-    }
+      },
+      { rootMargin: "-40% 0px -45% 0px", threshold: 0 }
+    );
 
-    if (prevBtn) prevBtn.addEventListener("click", function () { goTo(index - 1); });
-    if (nextBtn) nextBtn.addEventListener("click", function () { goTo(index + 1); });
-  });
+    chapterIds.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) chapterObs.observe(el);
+    });
+  }
+
+  /* ——— SLA timer tick (inbox demo) ——— */
+  if (!reducedMotion) {
+    document.querySelectorAll("[data-sla-timer]").forEach(function (el) {
+      var mins = 14;
+      window.setInterval(function () {
+        mins += 1;
+        if (mins >= 15) {
+          el.textContent = "15m SLA";
+          el.classList.add("is-due");
+        } else {
+          el.textContent = mins + "m";
+        }
+      }, 8000);
+    });
+  }
 })();

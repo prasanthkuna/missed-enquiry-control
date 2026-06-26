@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Clinic Lead Recovery OS — missed calls and WhatsApp accountability for aesthetic clinics in Hyderabad. Free 7-day leakage audit." />
+    content="Clinic Lead Recovery — missed calls and WhatsApp accountability for Hyderabad aesthetic clinics. Daily owner digest at 8 AM. Free 7-day audit." />
   <meta property="og:title" content="Clinic Lead Recovery · Hyderabad aesthetic clinics" />
   <meta property="og:description"
     content="Recover missed calls and WhatsApp enquiries. Daily owner digest with named staff delays." />
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Outfit:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="tokens.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -32,13 +32,12 @@
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Clinic Lead Recovery home">
         <img src="assets/brand/logo.svg" width="32" height="32" alt="" />
-        <span>Recovery OS</span>
+        <span>Clinic Lead Recovery</span>
       </a>
       <nav aria-label="Primary">
         <ul class="nav-links">
-          <li><a href="#proof">Proof</a></li>
+          <li><a href="#deliverables">What you get</a></li>
           <li><a href="#product">Product</a></li>
-          <li><a href="#how">Process</a></li>
           <li><a href="digest.html">Digest</a></li>
           <li><a href="report.html">Check clinic</a></li>
         </ul>
@@ -53,63 +52,336 @@
   </header>
 
   <div class="mobile-menu" id="mobile-menu" hidden>
-    <a href="#proof">Proof</a>
+    <a href="#deliverables">What you get</a>
     <a href="#product">Product</a>
-    <a href="#how">Process</a>
     <a href="digest.html">Digest</a>
     <a href="report.html">Check clinic</a>
     <a href="audit.html">Free audit</a>
   </div>
 
   <div class="sticky-cta" id="sticky-cta">
-    <a href="audit.html" class="btn-primary">Book free audit</a>
+    <a href="audit.html" class="btn-primary">Get my leakage report</a>
   </div>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero section--dark" aria-labelledby="hero-title">
       <div class="hero-mesh" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container hero-layout">
-        <div class="hero-copy" data-reveal>
-          <p class="hero-urgency">Free 7-day audit · 3 slots this month</p>
+        <div class="hero-copy">
+          <p class="hero-urgency">Free 7-day audit · 3 slots this month · same-day WhatsApp reply</p>
           <p class="eyebrow">Hyderabad · Skin, hair, dental &amp; aesthetic</p>
-          <h1 id="hero-title">Missed calls and slow replies leak more revenue than ads.</h1>
-          <p class="hero-lead">
-            We capture missed phone calls and WhatsApp enquiries, assign callbacks to your team,
-            and send the owner a daily digest — naming who delayed follow-up.
+          <h1 id="hero-title">Your clinic loses high-ticket bookings to calls nobody called back.</h1>
+          <p class="funnel-line">
+            <strong>Free audit</strong> → leakage report → <strong>14-day pilot ₹9,999</strong> → ₹14,999/mo
           </p>
-          <div class="hero-ctas">
-            <a href="audit.html" class="btn-primary">Book free audit</a>
+          <p class="hero-lead">
+            Missed phone calls and cold WhatsApp chats — captured, assigned, and reported to the owner every morning at 8 AM with staff names.
+          </p>
+          <div class="hero-ctas" id="hero-ctas">
+            <a href="audit.html" class="btn-primary">Get my leakage report</a>
             <a href="report.html?demo=1" class="btn-outline">Check your clinic</a>
-            <a href="digest.html" class="link-arrow">See sample digest</a>
           </div>
+          <p class="hero-reply">Same WhatsApp number · Owner never opens a CRM</p>
         </div>
-        <div class="phone-frame" data-reveal data-reveal-delay="1" aria-label="Sample owner recovery digest">
-          <div class="phone-notch" aria-hidden="true"></div>
-          <div class="phone-screen">
-            <div class="phone-status"><span>8:00 AM</span><span>Recovery digest</span></div>
-            <div class="phone-app-header"><span class="dot"></span> <span data-clinic-short>Celestee</span> · Daily</div>
-            <div class="phone-metrics">
-              <div class="metric-row"><strong>Missed calls</strong><span>6</span></div>
-              <div class="metric-row is-alert"><strong>Callbacks overdue</strong><span>2</span></div>
-              <div class="metric-row"><strong>Hot leads pending</strong><span>5</span></div>
-              <div class="metric-row is-alert"><strong>Slow reply</strong><span>Priya · 47m</span></div>
+
+        <div class="hero-composite" aria-label="Recovery desk preview">
+          <div class="browser-frame">
+            <div class="browser-chrome">
+              <div class="browser-dots"><i></i><i></i><i></i></div>
+              <div class="browser-url">app.clinicleadrecovery.in/callbacks</div>
             </div>
-            <div class="progress-block">
-              <div class="progress-label"><span>Recovery rate</span><span>62%</span></div>
-              <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="browser-body browser-body--board">
+              <div class="board-columns">
+                <div>
+                  <div class="board-col-head">Due now <span class="count">2</span></div>
+                  <div class="board-card is-overdue">
+                    <div class="board-card-top"><strong>+91 96xxx</strong><span class="tag is-warn">30m</span></div>
+                    <p>Missed call · Full body laser enquiry</p>
+                  </div>
+                  <div class="board-card is-due">
+                    <div class="board-card-top"><strong>+91 88xxx</strong><span class="tag is-due">Due</span></div>
+                    <p>Missed call · PRP consult</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="board-col-head">Assigned <span class="count">3</span></div>
+                  <div class="board-card">
+                    <div class="board-card-top"><strong>+91 95xxx</strong><span class="tag is-hot">Hot</span></div>
+                    <p>Callback · Hair transplant</p>
+                    <div class="board-assignee"><span class="avatar">K</span> Kumar</div>
+                  </div>
+                  <div class="board-card">
+                    <div class="board-card-top"><strong>+91 97xxx</strong></div>
+                    <p>Missed call · Facial slot</p>
+                    <div class="board-assignee"><span class="avatar">P</span> Priya</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="board-col-head">Booked <span class="count">2</span></div>
+                  <div class="board-card">
+                    <div class="board-card-top"><strong>+91 94xxx</strong><span class="tag is-done">Booked</span></div>
+                    <p>Recovered · Laser package</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-frame" data-hero-phone aria-label="Sample 8 AM digest">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-screen">
+              <div class="phone-status" id="hero-time"><span>8:00 AM</span><span>Owner digest</span></div>
+              <div class="phone-app-header"><span class="dot"></span> <span data-clinic-short>Celestee</span> · Daily</div>
+              <div class="phone-metrics" id="hero-metrics">
+                <div class="metric-row" data-hero-row><strong>Missed calls</strong><span>6</span></div>
+                <div class="metric-row is-alert" data-hero-row><strong>Callbacks overdue</strong><span>2</span></div>
+                <div class="metric-row" data-hero-row><strong>Hot leads pending</strong><span>5</span></div>
+                <div class="metric-row is-alert" data-hero-row data-hero-alert><strong>Slow reply</strong><span>Priya · 47m</span></div>
+              </div>
+              <div class="progress-block" id="hero-progress">
+                <div class="progress-label"><span>Recovery rate</span><span>62%</span></div>
+                <div class="progress-bar"><div class="progress-fill" id="hero-progress-fill"></div></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--tight" id="proof" aria-labelledby="proof-title">
+    <section class="section--paper section--tight">
+      <div class="container">
+        <div class="trust-strip">
+          <span>Meta WhatsApp Business API</span>
+          <span>Exotel telephony</span>
+          <span>Same clinic number</span>
+          <span>Consent-safe templates</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="deliverables" aria-labelledby="deliverables-title">
+      <div class="container">
+        <div class="section-head centered" data-reveal>
+          <p class="eyebrow" style="color: var(--color-primary)">Everything included</p>
+          <h2 id="deliverables-title">What you get — by category</h2>
+          <p>Eight parts of the Recovery OS. No CRM login for the owner.</p>
+        </div>
+        <div class="deliverable-grid" data-reveal data-reveal-delay="1">
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <h3>Missed calls</h3>
+            <p>Exotel capture → lead → callback task within 30 minutes.</p>
+            <a href="#chapter-callbacks">See callback board ↓</a>
+          </article>
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </div>
+            <h3>WhatsApp inbox</h3>
+            <p>Same number · team inbox · laser, PRP, price tags.</p>
+            <a href="#chapter-inbox">See inbox ↓</a>
+          </article>
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+            </div>
+            <h3>Callback desk</h3>
+            <p>Every missed call = owned task with assignee and outcome.</p>
+            <a href="#chapter-callbacks">See board ↓</a>
+          </article>
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>SLA &amp; accountability</h3>
+            <p>15-min hot · 24-hr price follow-up · names in digest.</p>
+            <a href="#chapter-digest">See SLA report ↓</a>
+          </article>
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            </div>
+            <h3>Owner digest</h3>
+            <p>8 AM WhatsApp · missed calls, hot leads, call-these-3.</p>
+            <a href="#chapter-digest">See digest ↓</a>
+          </article>
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Consent-safe recovery</h3>
+            <p>Opt-in before auto templates · STOP handling built in.</p>
+            <a href="audit.html">Book audit →</a>
+          </article>
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <h3>Clinic playbooks</h3>
+            <p>Derma pack: laser, PRP, hair, facial, implant intents.</p>
+            <a href="#chapter-inbox">See tags ↓</a>
+          </article>
+          <article class="deliverable-card">
+            <div class="deliverable-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Done-with-you setup</h3>
+            <p>Number onboarding · reception training · weekly owner review.</p>
+            <a href="audit.html">Start audit →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="product" aria-labelledby="product-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">The morning leakage brief</p>
+          <h2 id="product-title">See exactly what your team uses — and what lands on your phone</h2>
+          <p>Three product views. Real clinic copy. No dashboard theatre.</p>
+        </div>
+
+        <div class="chapter-layout" data-reveal data-reveal-delay="1">
+          <nav class="chapter-nav" aria-label="Product chapters" data-chapter-nav>
+            <a href="#chapter-callbacks" data-chapter-link>Callbacks</a>
+            <a href="#chapter-inbox" data-chapter-link>Inbox</a>
+            <a href="#chapter-digest" data-chapter-link>Owner digest</a>
+          </nav>
+
+          <div>
+            <article class="chapter-block" id="chapter-callbacks">
+              <p class="chapter-label">Chapter 01 · Missed calls</p>
+              <h3>Every missed call becomes an owned callback</h3>
+              <p>Reception sees due now, assigned, and booked — owner sees overdue count in the 8 AM digest.</p>
+              <div class="browser-frame">
+                <div class="browser-chrome">
+                  <div class="browser-dots"><i></i><i></i><i></i></div>
+                  <div class="browser-url">app.clinicleadrecovery.in/callbacks</div>
+                </div>
+                <div class="browser-body browser-body--board">
+                  <div class="board-columns">
+                    <div>
+                      <div class="board-col-head">Due now <span class="count">2</span></div>
+                      <div class="board-card is-overdue">
+                        <div class="board-card-top"><strong>+91 96xxx</strong><span class="tag is-warn">32m</span></div>
+                        <p>Missed · Laser full body price</p>
+                      </div>
+                      <div class="board-card is-due">
+                        <div class="board-card-top"><strong>+91 88xxx</strong><span class="tag is-due">Due</span></div>
+                        <p>Missed · Saturday slot</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="board-col-head">Assigned <span class="count">2</span></div>
+                      <div class="board-card">
+                        <div class="board-card-top"><strong>+91 95xxx</strong><span class="tag is-hot">Hot</span></div>
+                        <p>Callback · Hair transplant</p>
+                        <div class="board-assignee"><span class="avatar">K</span> Kumar · due 11:30</div>
+                      </div>
+                      <div class="board-card">
+                        <div class="board-card-top"><strong>+91 97xxx</strong></div>
+                        <p>Missed · PRP package</p>
+                        <div class="board-assignee"><span class="avatar">P</span> Priya</div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="board-col-head">Booked <span class="count">3</span></div>
+                      <div class="board-card">
+                        <div class="board-card-top"><strong>+91 94xxx</strong><span class="tag is-done">Booked</span></div>
+                        <p>Recovered yesterday · Facial</p>
+                      </div>
+                      <div class="board-card">
+                        <div class="board-card-top"><strong>+91 91xxx</strong><span class="tag is-done">Booked</span></div>
+                        <p>Recovered · Consult</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="chapter-block" id="chapter-inbox">
+              <p class="chapter-label">Chapter 02 · WhatsApp</p>
+              <h3>One inbox for price asks, hot leads, and booking intent</h3>
+              <p>15-minute hot SLA tracked live. Slow replies surface in tomorrow's digest with staff names.</p>
+              <div class="browser-frame">
+                <div class="browser-chrome">
+                  <div class="browser-dots"><i></i><i></i><i></i></div>
+                  <div class="browser-url">app.clinicleadrecovery.in/inbox</div>
+                </div>
+                <div class="browser-body">
+                  <div class="inbox-mock">
+                    <aside class="inbox-sidebar">
+                      <div class="inbox-sidebar-head">Today · 12 open</div>
+                      <div class="inbox-thread">
+                        <div class="inbox-thread-item is-active">
+                          <strong>+91 98xxx</strong>
+                          <span>Full body laser cost for 6 sessions?</span>
+                          <div class="inbox-thread-meta"><span class="tag is-hot">Hot</span><span class="tag is-due" data-sla-timer>14m</span></div>
+                        </div>
+                        <div class="inbox-thread-item">
+                          <strong>+91 97xxx</strong>
+                          <span>PRP hair package price</span>
+                          <div class="inbox-thread-meta"><span class="tag is-due">SLA</span></div>
+                        </div>
+                        <div class="inbox-thread-item">
+                          <strong>+91 88xxx</strong>
+                          <span>Saturday facial slot available?</span>
+                          <div class="inbox-thread-meta"><span class="tag">Price</span></div>
+                        </div>
+                      </div>
+                    </aside>
+                    <div class="inbox-pane">
+                      <div class="inbox-pane-head">
+                        <strong>+91 98xxx · Laser</strong>
+                        <span class="tag is-due" data-sla-timer>14m SLA</span>
+                      </div>
+                      <div class="inbox-messages">
+                        <div class="msg-bubble in">Hi, full body laser cost for 6 sessions?<div class="msg-time">6:14 PM</div></div>
+                        <div class="msg-bubble out">Thanks for reaching Celestee! Sharing package details…<div class="msg-time">6:18 PM · Priya</div></div>
+                        <div class="msg-bubble in">What about EMI options?<div class="msg-time">6:22 PM</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="chapter-block" id="chapter-digest">
+              <p class="chapter-label">Chapter 03 · Owner truth</p>
+              <h3>What lands on your phone at 8 AM — no CRM login</h3>
+              <p>Missed calls, SLA breaches by name, and the only list that matters: call these 3 before noon.</p>
+              <div class="split-2" style="align-items: center;">
+                <div class="phone-frame" style="margin-inline: auto;">
+                  <div class="phone-notch" aria-hidden="true"></div>
+                  <div class="phone-screen">
+                    <div class="phone-status"><span>8:00 AM</span><span>WhatsApp</span></div>
+                    <div class="digest-preview" data-clinic-digest="compact">Loading…</div>
+                  </div>
+                </div>
+                <div>
+                  <ul class="digest-steps">
+                    <li><div><strong>Missed calls &amp; callbacks</strong><span>Which calls had no callback within 30 minutes.</span></div></li>
+                    <li><div><strong>SLA breaches by name</strong><span>Who delayed beyond 15 minutes — not anonymous stats.</span></div></li>
+                    <li><div><strong>Call these 3 before noon</strong><span>The only priority list the owner needs.</span></div></li>
+                  </ul>
+                  <p style="margin-top: 1.25rem;"><a href="digest.html" class="link-arrow">Full digest walkthrough</a></p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark section--tight" id="proof" aria-labelledby="proof-title">
       <div class="container">
         <div class="section-head centered" data-reveal>
           <p class="eyebrow">Operational proof</p>
           <h2 id="proof-title">Numbers owners act on</h2>
-          <p>Not dashboard logins. Response time, missed calls, and named accountability.</p>
         </div>
         <div class="stat-grid" data-reveal data-reveal-delay="1">
           <div class="stat-cell">
@@ -129,84 +401,14 @@
             <div class="label">AM daily digest to owner</div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="problem" aria-labelledby="problem-title">
-      <div class="container">
-        <div class="section-head centered" data-reveal>
-          <p class="eyebrow">Where revenue leaks</p>
-          <h2 id="problem-title">Three gaps that cost high-ticket bookings</h2>
-        </div>
-        <div class="leakage-grid" data-reveal data-reveal-delay="1">
-          <article class="leakage-card">
-            <div class="leakage-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                <path d="M16 2l4 4-4 4"/>
-              </svg>
-            </div>
-            <h3>Missed calls vanish</h3>
-            <p>Patient calls during lunch rush. No callback task. No owner visibility. Lead goes to the clinic down the road.</p>
-          </article>
-          <article class="leakage-card">
-            <div class="leakage-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-              </svg>
-            </div>
-            <h3>WhatsApp goes cold</h3>
-            <p>Price and appointment chats sit unread. Staff think someone else replied. Owner finds out never.</p>
-          </article>
-          <article class="leakage-card">
-            <div class="leakage-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-            <h3>No follow-up discipline</h3>
-            <p>Hot PRP, laser, and implant enquiries need a second touch in 24 hours. Without SLA, they don't get it.</p>
-          </article>
+        <div class="quote-block" data-reveal style="margin-top: 2.5rem;">
+          <blockquote>“I don't need another dashboard. I need to know who ignored the laser enquiry at 6 PM.”</blockquote>
+          <cite>Aesthetic clinic owner · Jubilee Hills · <a href="report.html?demo=1">See Celestee demo →</a></cite>
         </div>
       </div>
     </section>
 
-    <section class="section" id="product" aria-labelledby="product-title">
-      <div class="container">
-        <div class="section-head centered" data-reveal>
-          <p class="eyebrow">The recovery desk</p>
-          <h2 id="product-title">One system for calls, WhatsApp, and owner truth</h2>
-          <p>Not another CRM. A leakage control desk your reception actually uses.</p>
-        </div>
-        <div class="product-demo" data-product-demo data-reveal data-reveal-delay="1">
-          <div class="product-tabs" role="tablist" aria-label="Product views">
-            <button type="button" class="product-tab is-active" role="tab" aria-selected="true" data-tab="inbox">Inbox</button>
-            <button type="button" class="product-tab" role="tab" aria-selected="false" data-tab="callbacks">Callbacks</button>
-            <button type="button" class="product-tab" role="tab" aria-selected="false" data-tab="digest">Owner digest</button>
-          </div>
-          <div class="product-panel is-active" role="tabpanel" data-panel="inbox">
-            <ul class="ui-list">
-              <li class="ui-list-item"><span>+91 98xxx · Full body laser price</span><span class="tag">Hot · 4m</span></li>
-              <li class="ui-list-item"><span>+91 97xxx · PRP hair package</span><span class="tag is-due">15m SLA</span></li>
-              <li class="ui-list-item"><span>+91 88xxx · Saturday facial slot</span><span class="tag">Price ask</span></li>
-              <li class="ui-list-item"><span>+91 91xxx · Hair transplant consult</span><span class="tag is-done">Replied</span></li>
-            </ul>
-          </div>
-          <div class="product-panel" role="tabpanel" data-panel="callbacks" hidden>
-            <ul class="ui-list">
-              <li class="ui-list-item"><span>Missed call · +91 96xxx</span><span class="tag is-due">Due now</span></li>
-              <li class="ui-list-item"><span>Missed call · +91 95xxx</span><span class="tag">Assigned · Kumar</span></li>
-              <li class="ui-list-item"><span>Callback · +91 94xxx</span><span class="tag is-done">Booked</span></li>
-            </ul>
-          </div>
-          <div class="product-panel" role="tabpanel" data-panel="digest" hidden>
-            <div class="digest-preview" data-clinic-digest="compact">Loading…</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how" aria-labelledby="how-title">
+    <section class="section section--paper" id="how" aria-labelledby="how-title">
       <div class="container">
         <div class="section-head centered" data-reveal>
           <p class="eyebrow">How it works</p>
@@ -214,41 +416,30 @@
         </div>
         <div class="steps-row" data-reveal data-reveal-delay="1">
           <article class="step-card">
-            <p class="step-num">Step 01</p>
-            <h3>Capture</h3>
-            <p>Telephony + WhatsApp feed into one lead record per patient phone.</p>
+            <p class="step-num">01 · Capture</p>
+            <h3>Telephony + WhatsApp</h3>
+            <p>One lead record per patient phone — calls and chats together.</p>
           </article>
           <article class="step-card">
-            <p class="step-num">Step 02</p>
-            <h3>Assign</h3>
-            <p>Missed call → callback task. WhatsApp → inbox with SLA timer.</p>
+            <p class="step-num">02 · Assign</p>
+            <h3>Tasks + SLA</h3>
+            <p>Missed call → callback task. WhatsApp → inbox with 15-min timer.</p>
           </article>
           <article class="step-card">
-            <p class="step-num">Step 03</p>
-            <h3>Recover</h3>
-            <p>Staff marks outcome. Consent-safe WhatsApp recovery where allowed.</p>
+            <p class="step-num">03 · Recover</p>
+            <h3>Staff action</h3>
+            <p>Outcome logged. Consent-safe WhatsApp recovery where allowed.</p>
           </article>
           <article class="step-card">
-            <p class="step-num">Step 04</p>
-            <h3>Prove</h3>
-            <p>Owner digest every morning — names, delays, who to call before noon.</p>
+            <p class="step-num">04 · Prove</p>
+            <h3>Owner digest</h3>
+            <p>8 AM report with names, delays, who to call before noon.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--tight">
-      <div class="container">
-        <div class="quote-block" data-reveal>
-          <blockquote>
-            “I don't need another dashboard. I need to know who ignored the laser price enquiry at 6 PM — and which missed calls never got a callback.”
-          </blockquote>
-          <cite>Aesthetic clinic owner · Jubilee Hills</cite>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--light" id="pricing" aria-labelledby="pricing-title">
+    <section class="section section--paper" id="pricing" aria-labelledby="pricing-title">
       <div class="container">
         <div class="section-head centered" data-reveal>
           <p class="eyebrow">One package</p>
@@ -258,36 +449,36 @@
           <span class="badge">14-day recovery pilot</span>
           <h3>Clinic Lead Recovery</h3>
           <p class="price">₹9,999</p>
-          <p class="price-note">Then ₹14,999/mo + usage · same number where possible</p>
-          <ul>
+          <p class="price-note">Then ₹14,999/mo + usage · free 7-day audit first</p>
+          <ul class="pricing-checklist">
             <li>Missed-call tracking + callback task board</li>
-            <li>WhatsApp inbox with hot-lead SLA (15 min)</li>
+            <li>WhatsApp team inbox with hot-lead SLA (15 min)</li>
             <li>Daily 8 AM owner digest with staff names</li>
             <li>Coexistence on your existing WhatsApp number</li>
+            <li>Consent-safe recovery templates</li>
+            <li>Derma playbook tags (laser, PRP, hair, facial)</li>
+            <li>Reception training + number onboarding</li>
             <li>Weekly 15-min owner review call</li>
-            <li>Free 7-day leakage audit before you commit</li>
           </ul>
-          <a href="audit.html" class="btn-primary btn-primary--light" style="width:100%">Start with free audit</a>
+          <a href="audit.html" class="btn-primary btn-primary--light" style="width:100%">Get my leakage report</a>
         </div>
       </div>
     </section>
 
     <section class="cta-band" id="audit" aria-labelledby="audit-title">
       <div class="container">
-        <h2 id="audit-title" data-reveal>Free 7-day leakage audit</h2>
-        <p data-reveal data-reveal-delay="1">
-          Three slots this month for Hyderabad aesthetic clinics. Missed calls, slow WhatsApp replies, and unfollowed price enquiries — before you buy anything.
-        </p>
+        <h2 id="audit-title" data-reveal>Free 7-day leakage audit — 3 slots this month</h2>
+        <p data-reveal data-reveal-delay="1">Missed calls, slow WhatsApp, unfollowed price enquiries — mapped before you spend on software. We reply same day on WhatsApp.</p>
         <form class="form-stack" id="audit-form" data-audit-form data-reveal data-reveal-delay="2">
           <label for="phone" class="visually-hidden">Clinic WhatsApp number</label>
           <input type="tel" id="phone" name="phone" class="input" placeholder="Clinic WhatsApp number" autocomplete="tel" required />
           <p class="form-hint">The number patients use for enquiries</p>
           <label for="clinic" class="visually-hidden">Clinic name</label>
           <input type="text" id="clinic" name="clinic" class="input" placeholder="Clinic name · area" data-clinic-prefill required />
-          <button type="submit" class="btn-primary">Request audit on WhatsApp</button>
+          <button type="submit" class="btn-primary">Send on WhatsApp</button>
         </form>
         <p style="margin-top:1rem;font:var(--text-body-sm);color:var(--color-muted)">
-          <a href="https://wa.me/919008393030" class="link-arrow" target="_blank" rel="noopener noreferrer">WhatsApp +91 90083 93030</a>
+          <a href="https://wa.me/919008393030" class="link-arrow" target="_blank" rel="noopener noreferrer">Direct · +91 90083 93030</a>
         </p>
       </div>
     </section>
@@ -299,7 +490,7 @@
         <div class="footer-brand">
           <a href="index.html" class="brand">
             <img src="assets/brand/logo.svg" width="28" height="28" alt="" />
-            <span>Recovery OS</span>
+            <span>Clinic Lead Recovery</span>
           </a>
           <p>Lead recovery for Hyderabad aesthetic clinics. Official Meta WhatsApp Business API.</p>
         </div>

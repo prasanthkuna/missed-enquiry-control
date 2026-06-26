@@ -1,16 +1,17 @@
 :root {
-  --color-primary: #e63b2e;
-  --color-primary-hover: #ff4d40;
-  --color-primary-active: #c42f24;
-  --color-primary-muted: rgba(230, 59, 46, 0.14);
+  --color-primary: #e04a3a;
+  --color-primary-hover: #c73d2f;
+  --color-primary-muted: rgba(224, 74, 58, 0.12);
 
-  --color-canvas: #0a0a0b;
+  --color-canvas: #09090b;
   --color-canvas-elevated: #141416;
   --color-canvas-card: #18181b;
-  --color-canvas-light: #fafafa;
+  --color-canvas-paper: #f4f0ea;
+  --color-canvas-light: #ffffff;
 
   --color-border: #27272a;
   --color-border-soft: #3f3f46;
+  --color-border-paper: #ddd8d0;
 
   --color-ink: #fafafa;
   --color-body: #a1a1aa;
@@ -18,29 +19,34 @@
   --color-muted: #71717a;
   --color-on-primary: #ffffff;
 
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
+  --color-ink-paper: #18181b;
+  --color-body-paper: #52525b;
+  --color-muted-paper: #71717a;
+
+  --color-recovery: #2dd4a8;
+  --color-warning: #f5a623;
   --color-danger: #ef4444;
 
-  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
-  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  --text-display-xl: 500 clamp(2.5rem, 5vw, 4rem) / 1.05 var(--font-display);
-  --text-display-lg: 500 clamp(1.75rem, 3vw, 2.5rem) / 1.12 var(--font-display);
-  --text-display-md: 500 clamp(1.35rem, 2vw, 1.75rem) / 1.2 var(--font-display);
-  --text-title: 600 1rem / 1.3 var(--font-sans);
+  --text-display-xl: 400 clamp(2.35rem, 4.8vw, 3.75rem) / 1.06 var(--font-display);
+  --text-display-lg: 400 clamp(1.65rem, 3vw, 2.35rem) / 1.12 var(--font-display);
+  --text-display-md: 400 clamp(1.25rem, 2vw, 1.65rem) / 1.18 var(--font-display);
+  --text-title: 600 1rem / 1.35 var(--font-sans);
   --text-body: 400 0.9375rem / 1.65 var(--font-sans);
   --text-body-sm: 400 0.8125rem / 1.55 var(--font-sans);
-  --text-caption: 600 0.6875rem / 1.4 var(--font-sans);
-  --text-stat: 700 clamp(2rem, 4vw, 3rem) / 1 var(--font-sans);
+  --text-caption: 500 0.6875rem / 1.4 var(--font-mono);
+  --text-stat: 700 clamp(1.75rem, 3.5vw, 2.75rem) / 1 var(--font-sans);
 
-  --tracking-caps: 0.08em;
-  --container-max: 1120px;
-  --nav-height: 72px;
-  --radius-sm: 6px;
+  --tracking-caps: 0.1em;
+  --container-max: 1140px;
+  --nav-height: 68px;
+  --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 20px;
-  --shadow-card: 0 24px 80px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 120px rgba(230, 59, 46, 0.12);
+  --radius-lg: 16px;
+  --shadow-card: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --shadow-paper: 0 2px 12px rgba(24, 24, 27, 0.06);
+  --shadow-float: 0 32px 100px rgba(0, 0, 0, 0.55);
 }
